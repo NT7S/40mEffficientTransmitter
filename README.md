@@ -28,7 +28,7 @@ Only rev 7 files are in this repository.
 
 | Folder | Contents |
 |--------|----------|
-| [`PCB/`](PCB/) | KiCad 10.0.8 project (`pa40-classe`): schematic, board, custom design rules, project symbol library `pa40.kicad_sym`, project-local footprint libraries in `PCB/lib/` (`pa40.pretty` plus the KiCad stock subset the design uses, including `MountingHole.pretty`), 3-D models in `PCB/pa40.3dshapes/`, layout scripts and notes in `PCB/layout/`, and the floorplan in `PCB/floorplan/` |
+| [`PCB/`](PCB/) | KiCad 10.0.8 project (`pa40-classe`): schematic, board, custom design rules, project symbol library `pa40.kicad_sym`, project-local footprint libraries in `PCB/lib/` (`pa40.pretty` plus the KiCad stock subset the design uses, including `MountingHole.pretty`), 3-D models in `PCB/pa40.3dshapes/`, layout scripts and notes in `PCB/layout/`, the floorplan in `PCB/floorplan/`, and the JLCPCB Gerber package in [`PCB/production/`](PCB/production/) |
 | [`docs/`](docs/) | Schematic PDF and SVG, netlist, ERC and DRC reports, footprint renders, [layout renders](docs/layout/), [datasheet links](docs/datasheets.md) |
 | [`bom/`](bom/) | DigiKey BOM with prices and stock (`bom-digikey-rev7.csv`), BOM bulk-add file for one board, and cart file for two boards plus spares |
 | [`report/`](report/) | LaTeX source and built PDF of the design report, with the scripts that write its tables |
@@ -38,7 +38,7 @@ Only rev 7 files are in this repository.
 
 ## Building
 
-- Bare boards from JLCPCB (see `print/jlcpcb-order-notes.md`); parts from DigiKey; the boards are hand-populated.
+- Bare boards from JLCPCB. Upload [`PCB/production/pa40-classe-rev7-jlcpcb-gerbers.zip`](PCB/production/pa40-classe-rev7-jlcpcb-gerbers.zip); order parameters and a hole table are in [`PCB/production/README.md`](PCB/production/README.md) (also `print/jlcpcb-order-notes.md`). Parts from DigiKey; the boards are hand-populated.
 - Y1 is not in the DigiKey cart. Supply your own 7.030 MHz HC-49 crystal. The footprint takes an HC-49/US crystal, through-hole (4.88 mm lead pitch) or SMD. The BOM part (IQD LFXTAL011525Bulk) is CL 30 pF, but the oscillator simulation assumed CL 20 pF, so trim C9 for frequency.
 - L1-L3 are hand-wound toroids (L1 FT-50-61; L2, L3 T80-6) and are not in the DigiKey cart. Winding data is in the report.
 - D1 is unfitted. JP1 is a solder jumper: bridge it if R12 is not fitted.
@@ -52,6 +52,7 @@ The committed schematic and footprints already include later in-place edits (L2 
 - Footprints (from scratch only): `python3 tools/gen_fp.py` rewrites `PCB/lib/pa40.pretty`.
 - Layout: from `PCB/`, `python3 layout/route.py` reloads the board, strips tracks and zones, and re-routes. Then `sh layout/drc.sh` (needs `kicad-cli`). Top copper photo: `python3 layout/render_cu.py`. 3-D views: `python3 layout/make_3d.py` (pass `--use-board-stackup-colors` is already built in). The latest renders and notes are `PCB/layout/routing-v5-*.png` and `PCB/layout/routing-v5.md`.
 - Docs: `tools/export_docs.sh` rewrites the schematic PDF, netlist, SVG, `docs/erc.rpt` and, when the board is present, `docs/drc.rpt` and copies the v5 layout renders into `docs/layout/`.
+- Fabrication Gerbers: from the project root, `PCB/production/export.sh` (or `fab/export.sh` in the work tree) writes Gerbers and drill files with JLCPCB's KiCad settings. Zip only the layer files, the two `.drl` files, and the `.gbrjob` as `pa40-classe-rev7-jlcpcb-gerbers.zip`.
 - Report: in `report/`, run `python3 gen_tables.py`, `python3 gen_budget_table.py` and `python3 gen_gate_tables.py`, then `latexmk -pdf -jobname=report main.tex`.
 - Simulations: the decks in `sim/` run in ngspice. Raw waveform output (`.dat`, `.dat.gz`, `.npz`) is not committed; rerun the scripts to regenerate it.
 
