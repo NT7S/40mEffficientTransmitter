@@ -51,3 +51,7 @@ Only rev 7 files are in this repository.
 - Docs: after any schematic change, run `tools/export_docs.sh` (needs KiCad `kicad-cli`). It rewrites the schematic PDF, netlist, SVG and `docs/erc.rpt`.
 - Report: in `report/`, run `python3 gen_tables.py`, `python3 gen_budget_table.py` and `python3 gen_gate_tables.py`, then `latexmk -pdf -jobname=report main.tex`.
 - Simulations: the decks in `sim/` run in ngspice. Raw waveform output (`.dat`, `.dat.gz`, `.npz`) is not committed; rerun the scripts to regenerate it.
+
+## License
+
+This work is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/); see `LICENSE`. Third-party SPICE models in `sim/` keep their original copyright notices and terms.
