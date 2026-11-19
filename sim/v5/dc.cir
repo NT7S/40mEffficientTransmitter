@@ -1,0 +1,18 @@
+* DC check of clamp models: reverse (gate positive) sweep
+.include models/BZX84C5V6.spice.txt
+.include models/BZX84C6V2.spice.txt
+.include models/BAT54W.spice.txt
+V1 a 0 0
+VS1 a k1 0
+XZ1 0 k1 DI_BZX84C5V6
+VS2 a k2 0
+XZ2 0 k2 DI_BZX84C6V2
+VS3 a k3 0
+D3 0 k3 DI_BAT54W
+.control
+dc V1 0 8 0.01
+wrdata dc.dat i(VS1) i(VS2) i(VS3)
+dc V1 -1 0 0.001
+wrdata dcneg.dat i(VS1) i(VS2) i(VS3)
+.endc
+.end

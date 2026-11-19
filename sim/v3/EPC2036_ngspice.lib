@@ -1,0 +1,36 @@
+* EPC2036 eGaN FET, ngspice translation of EPC's LTspice model
+* Source: EPC GaN Power Device Library (EPCGaNLibrary.lib, v1.15+ entry for EPC2036),
+* (C) Efficient Power Conversion Corporation. Parameters checked against EPC's
+* official Spectre file EPC2036_V1.scs (epc-co.com). Translation changes only:
+*  - log() -> ln() (natural log); charge-defined capacitors kept as C ... Q={expr}
+*  - if(a,b,c) -> ternary; Temp -> parameter TJ (default 25 C)
+.subckt EPC2036 gatein drainin sourcein params: TJ=25
+.param aWg=123 A1=4.7499 k2=2.0338 k3=0.15 rpara=0.039128 rpara_s_factor=0.23
++ aITc=0.004104 arTc=-0.0054 k2Tc=0.0006 x0_0=1.6588 x0_1=3.8735e-06 x0_1_TC=0
++ dgs1=4.3e-07 dgs2=2.6e-13 dgs3=0.8 dgs4=0.23
++ ags1=7.4257e-11 ags2=4.0219e-11 ags3=1.8702 ags4=0.19695
++ ags5=-4.0069e-14 ags6=-3.674 ags7=0.093656
++ agd1=2.6555e-13 agd2=1.0757e-12 agd3=-0.10439 agd4=0.60281
++ agd5=1.4576e-11 agd6=-2.3244 agd7=6.1875
++ agd8=1.7475e-12 agd9=-20.723 agd10=28.685
++ asd1=3.6091e-11 asd2=4.7586e-11 asd3=-9.7731 asd4=8.7493
++ asd5=9.0279e-11 asd6=-0.12324 asd7=28.057 rg_value=0.6
+.param AA={A1*(1-aITc*(TJ-25))} KK={k2*(1-k2Tc*(TJ-25))} XX1={x0_1*(1-x0_1_TC*(TJ-25))}
+rd drainin drain {(1-rpara_s_factor)*rpara*(1-arTc*(TJ-25))}
+rs sourcein source {rpara_s_factor*rpara*(1-arTc*(TJ-25))}
+rg gatein gate {rg_value}
+Rcsdconv drain source {100000Meg/aWg}
+Rcgsconv gate source {100000Meg/aWg}
+Rcgdconv gate drain {100000Meg/aWg}
+bswitch drain source I={v(drain,source)>0 ?
++ (AA*ln(1.0+exp((v(gate,source)-KK)/k3))*v(drain,source)/(1+max(x0_0+XX1*v(gate,source),0.2)*v(drain,source))) :
++ (-AA*ln(1.0+exp((v(gate,drain)-KK)/k3))*v(source,drain)/(1+max(x0_0+XX1*v(gate,drain),0.2)*v(source,drain)))}
+bgsdiode gate source I={0.5*aWg/1077*(dgs1*(exp(min(v(gate,source),10)/dgs3)-1)+dgs2*(exp(min(v(gate,source),10)/dgs4)-1))}
+bgddiode gate drain I={0.5*aWg/1077*(dgs1*(exp(min(v(gate,drain),10)/dgs3)-1)+dgs2*(exp(min(v(gate,drain),10)/dgs4)-1))}
+C_GS gate source {ags1}
+C_CGS1 gate source Q={0.5*ags2*ags4*ln(1+exp((v(gate,source)-ags3)/ags4))+ags5*ags7*ln(1+exp((v(source,drain)-ags6)/ags7))}
+C_GD gate drain {agd1}
+C_CGD1 gate drain Q={0.5*ags2*ags4*ln(1+exp((v(gate,drain)-ags3)/ags4))+agd2*agd4*ln(1+exp((v(gate,drain)-agd3)/agd4))+agd5*agd7*ln(1+exp((v(gate,drain)-agd6)/agd7))+agd8*agd10*ln(1+exp((v(gate,drain)-agd9)/agd10))}
+C_SD source drain {asd1}
+C_CSD1 source drain Q={asd2*asd4*ln(1+exp((v(source,drain)-asd3)/asd4))+asd5*asd7*ln(1+exp((v(source,drain)-asd6)/asd7))}
+.ends EPC2036

@@ -1,0 +1,37 @@
+\begin{table}[tbp]\centering\footnotesize\setlength{\tabcolsep}{3.5pt}
+\caption{Gate-source clamps at the Q1 gate pad (Diodes Inc. models \cite{diodesSpice}), trimmed PA + LPF\simv. Columns as Table~\ref{tab:gate-r1}; $P_{cl}$ is the power dissipated in the clamp model \cite{projsim}.}\label{tab:gate-clamp}
+\begin{tabular}{@{}lllrrrrrr@{}}\toprule
+Loop L & R1 ($\Omega$) & Clamp & $\eta_{tot}$ (\%) & $\Delta\eta_{tot}$ (pts) & $V_{g,max}$ (V) & $V_{g,min}$ (V) & $I_{5V,gate}$ (mA) & $P_{cl}$ (mW) \\ \midrule
+2\,nH & 0 & none & 95.62 & +0.000 & 5.00 & $-$0.04 & 3.31 & 0.00 \\
+ &  & BAT54W & 95.58 & $-$0.035 & 5.00 & $-$0.04 & 3.64 & 0.10 \\
+ &  & BZX84C5V6 & 95.48 & $-$0.141 & 5.00 & $-$0.04 & 4.64 & 3.58 \\
+ &  & BZX84C6V2 & 95.50 & $-$0.120 & 5.00 & $-$0.04 & 4.44 & 2.86 \\
+ &  & BAT54W + C5V6 & 95.44 & $-$0.176 & 5.00 & $-$0.04 & 4.97 & 3.61 \\
+ &  & BAT54W + C6V2 & 95.46 & $-$0.156 & 5.00 & $-$0.04 & 4.78 & 2.89 \\
+\midrule
+2\,nH & 2.2 & none & 95.60 & $-$0.015 & 5.00 & $-$0.06 & 3.40 & 0.00 \\
+ &  & BAT54W & 95.57 & $-$0.051 & 5.00 & $-$0.06 & 3.73 & 0.10 \\
+ &  & BZX84C5V6 & 95.46 & $-$0.159 & 5.00 & $-$0.05 & 4.74 & 3.09 \\
+ &  & BZX84C6V2 & 95.48 & $-$0.138 & 5.00 & $-$0.05 & 4.54 & 2.44 \\
+ &  & BAT54W + C5V6 & 95.42 & $-$0.195 & 5.00 & $-$0.05 & 5.07 & 3.10 \\
+ &  & BAT54W + C6V2 & 95.44 & $-$0.174 & 5.00 & $-$0.05 & 4.88 & 2.47 \\
+\midrule
+5\,nH & 0 & none & 95.59 & $-$0.028 & 5.38 & $-$0.64 & 3.61 & 0.00 \\
+ &  & BAT54W & 95.55 & $-$0.064 & 5.35 & $-$0.28 & 3.95 & 0.10 \\
+ &  & BZX84C5V6 & 95.45 & $-$0.169 & 5.05 & $-$0.14 & 4.94 & 3.93 \\
+ &  & BZX84C6V2 & 95.47 & $-$0.149 & 5.11 & $-$0.19 & 4.75 & 3.16 \\
+ &  & BAT54W + C5V6 & 95.41 & $-$0.205 & 5.05 & $-$0.08 & 5.28 & 3.94 \\
+ &  & BAT54W + C6V2 & 95.43 & $-$0.184 & 5.10 & $-$0.12 & 5.09 & 3.17 \\
+\bottomrule
+\end{tabular}\end{table}
+\begin{table}[tbp]\centering\small
+\caption{Clamp DC behaviour: model (ngspice DC sweep of the Diodes Inc. models \cite{diodesSpice}) against the onsemi datasheet limits \cite{onsemiBZX84,onsemiBAT54}. The EPC2036 gate is rated \SI{6}{\volt} / \SI{-4}{\volt}, with up to \SI{0.9}{\milli\ampere} forward gate leakage at \SI{5}{\volt} \cite{epc2036ds}.}\label{tab:clamp-dc}
+\begin{tabularx}{\textwidth}{@{}L{3.6cm}L{2.7cm}L{2.7cm}Y@{}}\toprule
+Quantity & BZX84C5V6 & BZX84C6V2 & BAT54 \\ \midrule
+Leakage at \SI{5.0}{\volt}, model & \SI{11.4}{\micro\ampere} & \SI{0.03}{\nano\ampere} & \SI{34.9}{\micro\ampere} (equal to the model's IS; an artefact) \\
+Leakage, datasheet max & \SI{1}{\micro\ampere} at \SI{2}{\volt} & \SI{3}{\micro\ampere} at \SI{4}{\volt} & \SI{2}{\micro\ampere} at \SI{25}{\volt} \\
+Clamp voltage at 1 / 5 / 20\,mA, model & 5.37 / 5.59 / 6.07\,V & 6.13 / 6.20 / 6.29\,V & -- \\
+$V_Z$ datasheet (min--max) at 1 / 5 / 20\,mA & 4.8--6.0 / 5.2--6.0 / 5.2--6.3\,V & 5.6--6.6 / 5.8--6.6 / 5.8--6.8\,V & -- \\
+Forward voltage at \SI{10}{\milli\ampere}, model & 0.90\,V & 0.90\,V & 0.34\,V (datasheet 0.35 typ, 0.40 max) \\
+Capacitance & model CJO \SI{57.6}{\pico\farad}; datasheet \SI{200}{\pico\farad} at \SI{0}{\volt} & model CJO \SI{49.4}{\pico\farad}; datasheet \SI{185}{\pico\farad} at \SI{0}{\volt} & model CJO \SI{13.3}{\pico\farad}; datasheet 7.6 typ, \SI{10}{\pico\farad} max at \SI{1}{\volt} \\
+\bottomrule\end{tabularx}\end{table}

@@ -1,0 +1,21 @@
+\begin{table}[h]\centering\small
+\caption{Key-down power budget at \SI{12.0}{\volt} (simulated and estimated) \cite{projsim,projnotes,tiTPS62175}.}\label{tab:budget}
+\begin{tabularx}{\textwidth}{@{}Yrl L{5.6cm}@{}}
+\toprule Item & Power & Unit & Basis \\ \midrule
+RF output at J2 & 5.101 & W & Trimmed PA + LPF run \\
+PA rail input (drain, L1, tank, LPF) & 5.293 & W & Same run \\
+\quad of which: LPF loss & 34.0 & mW & Power into C16 node minus power at J2 \\
+\quad of which: Q1, L1, tank and L-match loss & 158.0 & mW & PA rail input minus LPF input \\
+Q2 keying switch & 7.8 & mW & Keying run, fitted model \\
+R2 + R3 divider while keyed & 3.3 & mW & $12^2/\SI{44}{\kilo\ohm}$ \\
+5\,V loads from 12\,V via buck & 28.8 & mW & 25.1 mW / 0.87 (buck loss 3.7 mW) \\
+\quad 5\,V load: Q1 gate drive & 16.6 & mW & Trimmed run, ideal driver \\
+\quad 5\,V load: U1 internal & 4.6 & mW & $C_{pd}$ \SI{26}{\pico\farad} $\times 5^2 \times f$ \\
+\quad 5\,V load: oscillator & 3.9 & mW & Oscillator run \\
+R12 shunt (if fitted) & 2.0 & mW & \SI{444.5}{\milli\ampere}$^2\times$\SI{10}{\milli\ohm} \\
+\midrule
+\textbf{Total from 12.0\,V} & \textbf{5.335} & W & 444.6\,mA \\
+Drain efficiency (PA + LPF) & 96.4 & \% & Trimmed run \\
+\textbf{Whole-transmitter efficiency} & \textbf{95.6} & \% & RF out / total in \\
+Key-up draw & about 30 & mW & About \SI{2.5}{\milli\ampere}; oscillator, U1, gate drive running (estimate) \\
+\bottomrule\end{tabularx}\end{table}

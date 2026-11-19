@@ -1,0 +1,57 @@
+\begin{longtable}{@{}p{1.8cm}r >{\raggedright\arraybackslash}p{2.3cm} >{\raggedright\arraybackslash}p{1.9cm} p{3.7cm} p{4.4cm} r r >{\raggedright\arraybackslash}p{3.9cm}@{}}
+\caption{DigiKey bill of materials, rev 7, generated from \texttt{bom-digikey-rev7.csv}. Quantity-0 lines are copper pads or DNP footprints. Unit prices at quantity 1 in USD from the DigiKey US API on 18 Nov 2026, except Y1 (earlier web search; no API listing). Check prices and stock in the cart before ordering.}\label{tab:bom}\\
+\toprule Refs & Qty & Value & Mfr & MPN & DigiKey PN & Unit & Ext & Note\\ \midrule\endfirsthead
+\toprule Refs & Qty & Value & Mfr & MPN & DigiKey PN & Unit & Ext & Note\\ \midrule\endhead
+\midrule\multicolumn{9}{r}{\emph{continued}}\\\endfoot\bottomrule\endlastfoot
+C1 (a) & 1 & 270p 100V C0G & KEMET & C1206C271J1GACTU & \texttt{\footnotesize 399-C1206C271J1GACTUCT-ND} & 0.60 & 0.60 & C1 = 270p + 15p = 285p; DigiKey US API 18 Nov 2026\\
+C1 (b) & 1 & 15p 100V C0G & KEMET & C1206C150J1GACTU & \texttt{\footnotesize 399-C1206C150J1GACTUCT-ND} & 0.59 & 0.59 & stack or place side by side; DigiKey US API 18 Nov 2026\\
+C2 (a) & 1 & 390p 200V C0G & KEMET & C1206C391J2GACTU & \texttt{\footnotesize 399-C1206C391J2GACTUCT-ND} & 0.74 & 0.74 & C2 = 390p + 33p = 423p (target 424.5p, -0.4\%); 200 V vs est. 58 V pk; DigiKey US API 18 Nov 2026\\
+C2 (b) & 1 & 33p 200V C0G & KEMET & C1206C330J2GACTU & \texttt{\footnotesize 399-14680-1-ND} & 0.64 & 0.64 & DigiKey US API 18 Nov 2026\\
+C3 (a) & 1 & 680p 100V C0G & KEMET & C1206C681J1GACTU & \texttt{\footnotesize 399-14704-1-ND} & 0.65 & 0.65 & C3 = 680p + 51p = 731p; DigiKey US API 18 Nov 2026\\
+C3 (b) & 1 & 51p 100V C0G & KEMET & C1206C510J1GACTU & \texttt{\footnotesize 399-17481-1-ND} & 0.67 & 0.67 & DigiKey US API 18 Nov 2026\\
+C16, C19 & 2 & 270p 100V C0G & KEMET & C1206C271J1GACTU & \texttt{\footnotesize 399-C1206C271J1GACTUCT-ND} & 0.60 & 1.20 & same line as C1(a); order 3 total; DigiKey US API 18 Nov 2026\\
+C17 & 1 & 150p 100V C0G & KEMET & C1206C151J1GACTU & \texttt{\footnotesize 399-C1206C151J1GACTUCT-ND} & 0.58 & 0.58 & DigiKey US API 18 Nov 2026\\
+C18 & 1 & 18p 100V C0G & KEMET & C1206C180J1GACTU & \texttt{\footnotesize 399-C1206C180J1GACTUCT-ND} & 0.59 & 0.59 & price about \$0.53 per search summary; DigiKey US API 18 Nov 2026\\
+C4 & 1 & 47n 50V X7R & Samsung & CL10B473KB8NNNC & \texttt{\footnotesize 1276-1063-1-ND} & 0.11 & 0.11 & DigiKey US API 18 Nov 2026\\
+C5, C6 & 2 & 33p 50V C0G & Murata & GRM1885C1H330JA01D & \texttt{\footnotesize 490-1415-1-ND} & 0.13 & 0.26 & DigiKey US API 18 Nov 2026\\
+C7, C13 & 2 & 100n 50V X7R & Yageo & CC0603KRX7R9BB104 & \texttt{\footnotesize 311-1344-1-ND} & 0.14 & 0.28 & Murata GRM188R71H104KA93D is obsolete at DigiKey; DigiKey US API 18 Nov 2026\\
+C8 & 1 & 1n 50V C0G & Murata & GRM1885C1H102JA01D & \texttt{\footnotesize 490-1451-1-ND} & 0.10 & 0.10 & DigiKey US API 18 Nov 2026\\
+C9 & 1 & 5.5-30p trimmer & Knowles Voltronics & JZ300 & \texttt{\footnotesize 1674-1005-1-ND} & 3.45 & 3.45 & replaces obsolete Murata TZC3P300A110R00; new footprint pa40:C\_\allowbreak{}Trimmer\_\allowbreak{}Voltronics\_\allowbreak{}JZ; DigiKey US API 18 Nov 2026\\
+C10 & 1 & 100u 25V & Panasonic & EEE-FK1E101P & \texttt{\footnotesize PCE3796CT-ND} & 0.88 & 0.88 & DigiKey US API 18 Nov 2026\\
+C11 & 1 & 1u 25V X7R & Yageo & CC0805KKX7R8BB105 & \texttt{\footnotesize 311-1456-1-ND} & 0.28 & 0.28 & Murata GRM21BR71E105KA99L obsolete at DigiKey; DigiKey US API 18 Nov 2026\\
+C12, C15 & 2 & 10n 50V C0G & Yageo & CC0603JRNPO9BN103 & \texttt{\footnotesize 311-3960-1-ND} & 0.67 & 1.34 & Murata 490-9666-1-ND is \$0.13 but only 13 in stock; DigiKey US API 18 Nov 2026\\
+C14 & 1 & 100n 50V X7R & Samsung & CL21B104KBCNNNC & \texttt{\footnotesize 1276-1003-1-ND} & 0.10 & 0.10 & DigiKey US API 18 Nov 2026\\
+C20 & 1 & 10p 50V C0G & Murata & GRM1885C1H100JA01D & \texttt{\footnotesize 490-1403-1-ND} & 0.14 & 0.14 & DigiKey US API 18 Nov 2026\\
+C21 & 1 & 2.2u 50V X5R & Yageo & CC0805KKX5R9BB225 & \texttt{\footnotesize 311-1873-1-ND} & 0.55 & 0.55 & DigiKey US API 18 Nov 2026\\
+C22 & 1 & 22u 16V X5R & Samsung & CL21A226MOQNNNE & \texttt{\footnotesize 1276-2909-1-ND} & 0.32 & 0.32 & replaces CL21A226MPQNNNE (10 V, 0 in stock at DigiKey); 16 V upgrade, same 0805; DigiKey US API 18 Nov 2026\\
+C23 & 1 & 10u 10V X5R & Yageo & CC0805KRX5R6BB106 & \texttt{\footnotesize 311-3424-1-ND} & 0.54 & 0.54 & Murata GRM21BR61A106KE19L obsolete; DigiKey US API 18 Nov 2026\\
+FB2, FB3 & 2 & 220R@100MHz & Murata & BLM18PG221SN1D & \texttt{\footnotesize 490-5221-1-ND} & 0.14 & 0.28 & DigiKey US API 18 Nov 2026\\
+J1 & 1 & DC barrel jack 5.5x2.1 plug (2.0 mm pin), 5 A 24 V, center + & Same Sky & PJ-102AH & \texttt{\footnotesize CP-102AH-ND} & 0.83 & 0.83 & pin 1 center = +12 V, pin 2 sleeve = GND, pin 3 switch NC; KiCad BarrelJack\_\allowbreak{}CUI\_\allowbreak{}PJ-102AH\_\allowbreak{}Horizontal; DigiKey US API 18 Nov 2026\\
+J2 & 1 & BNC R/A jack, 50 ohm, 2 GHz & Molex & 0731000105 & \texttt{\footnotesize WM5524-ND} & 2.22 & 2.22 & pin 1 center, pin 2 shell (two posts); pa40:BNC\_\allowbreak{}Molex\_\allowbreak{}73100-0105\_\allowbreak{}Horizontal; holes from Molex SD-73100-0105; rec. PCB 2.40 mm, 3.00 mm pins still clear a 1.6 mm board; DigiKey US API 18 Nov 2026\\
+J4 & 1 & 3.5 mm stereo (TRS) jack, key input & Same Sky & SJ1-3523N & \texttt{\footnotesize CP1-3523N-ND} & 1.20 & 1.20 & tip = key (to R3), sleeve = GND, ring NC; pa40:Jack\_\allowbreak{}3.5mm\_\allowbreak{}CUI\_\allowbreak{}SJ1-3523N\_\allowbreak{}Horizontal\_\allowbreak{}DS; DigiKey US API 18 Nov 2026\\
+L1 core & 1 & FT-50-61 toroid & Fair-Rite & 5961000301 & \texttt{\footnotesize 1934-1301-ND} & 0.87 & 0.87 & wind 26 t \#24 enamel; via aggreg.\\
+L4 & 1 & 10u & Wurth Elektronik & 74404042100 & \texttt{\footnotesize 732-5508-1-ND} & 1.16 & 1.16 & replaces Coilcraft LPS4018-103MRC (DigiKey Marketplace only); 10u 20\%, Isat 1.7 A, DCR 150 mOhm, semi-shielded; DigiKey US API 18 Nov 2026\\
+Q1 & 1 & EPC2036 & EPC & EPC2036 & \texttt{\footnotesize 917-1100-1-ND} & 2.10 & 2.10 & DigiKey US API 18 Nov 2026\\
+Q2 & 1 & AO3407A & Alpha \& Omega & AO3407A & \texttt{\footnotesize 785-1006-1-ND} & 0.52 & 0.52 & DigiKey status Not For New Designs; DigiKey US API 18 Nov 2026\\
+Q4 & 1 & MMBT3904 & onsemi & MMBT3904LT1G & \texttt{\footnotesize MMBT3904LT1GOSCT-ND} & 0.14 & 0.14 & DigiKey US API 18 Nov 2026\\
+R1 & 1 & 0R & Yageo & RC0603JR-070RL & \texttt{\footnotesize 311-0.0GRCT-ND} & 0.10 & 0.10 & DigiKey US API 18 Nov 2026\\
+R2, R3, R6 & 3 & 22k 1\% & Stackpole & RMCF0603FT22K0 & \texttt{\footnotesize RMCF0603FT22K0CT-ND} & 0.10 & 0.30 & Yageo 22k on order; DigiKey US API 18 Nov 2026\\
+R5 & 1 & 47k 1\% & Yageo & RC0603FR-0747KL & \texttt{\footnotesize 311-47.0KHRCT-ND} & 0.10 & 0.10 & DigiKey US API 18 Nov 2026\\
+R7 & 1 & 1.5k 1\% & Yageo & RC0603FR-071K5L & \texttt{\footnotesize 311-1.50KHRCT-ND} & 0.10 & 0.10 & DigiKey US API 18 Nov 2026\\
+R8 & 1 & 3.3k 1\% & Yageo & RC0603FR-073K3L & \texttt{\footnotesize 311-3.30KHRCT-ND} & 0.08 & 0.08 & DigiKey US API 18 Nov 2026\\
+R9 & 1 & 1k 1\% & Yageo & RC0603FR-071KL & \texttt{\footnotesize 311-1.00KHRCT-ND} & 0.11 & 0.11 & DigiKey US API 18 Nov 2026\\
+R10, R14 & 2 & 100k 1\% & Stackpole & RMCF0603FT100K & \texttt{\footnotesize RMCF0603FT100KCT-ND} & 0.11 & 0.22 & Yageo 100k on order; DigiKey US API 18 Nov 2026\\
+R11 & 1 & 91k 1\% & Yageo & RC0603FR-0791KL & \texttt{\footnotesize 311-91.0KHRCT-ND} & 0.10 & 0.10 & DigiKey US API 18 Nov 2026\\
+R12 & 1 & 10m 1\% shunt (optional, DNP) & Vishay Dale & WSK2512R0100FEA & \texttt{\footnotesize 541-WSK2512R0100FEACT-ND} & 1.42 & 1.42 & optional; skip and close JP1; DigiKey US API 18 Nov 2026\\
+R13 & 1 & 523k 1\% & Yageo & RC0603FR-07523KL & \texttt{\footnotesize 311-523KHRCT-ND} & 0.10 & 0.10 & DigiKey US API 18 Nov 2026\\
+TP1, TP2, TP3, TP12, TP13, TP14, TP15 & 7 & test point & Keystone & 5019 & \texttt{\footnotesize 36-5019CT-ND} & 0.24 & 1.68 & rev 6: +4 (TP12 +5V, TP13 GND, TP14 PA rail, TP15 Q2 gate); DigiKey US API 18 Nov 2026\\
+TP4-TP11 & 0 & bare SMD pads (rev 6 probe pairs) &  &  & \texttt{\footnotesize NO PART} &  & 0.00 & copper only, not ordered: TP4/5 gate, TP6/7 drain, TP8/9 xo, TP10/11 out\_\allowbreak{}50r\\
+D1 & 0 & DNP gate-source clamp &  &  & \texttt{\footnotesize DNP} &  & 0.00 & rev 6 footprint only; leave unfitted unless the gate rings past 6 V (see report)\\
+U1 & 1 & 74LVC1G17 & TI & SN74LVC1G17DBVR & \texttt{\footnotesize 296-11933-1-ND} & 0.15 & 0.15 & DigiKey US API 18 Nov 2026\\
+U2 & 1 & TPS62175 & TI & TPS62175DQCR & \texttt{\footnotesize 296-39451-1-ND} & 1.71 & 1.71 & search summaries show \$1.65-\$1.71; DigiKey US API 18 Nov 2026\\
+Y1 & 1 & 7.030 MHz, CL 30 pF & IQD & LFXTAL011525Bulk & \texttt{\footnotesize 449-LFXTAL011525BULK} & 0.93 & 0.93 & fits the THT holes of pa40 combo footprint; listed as discontinued by IQD; CL 30 pF not 20 pF; via search\\
+\midrule \multicolumn{7}{@{}l}{\textbf{Total, DigiKey parts, quantity-1 prices}} & \textbf{31.03} & DigiKey parts only, one board, qty-1 prices from the DigiKey US API on 18 Nov 2026, no shipping or tax; 29.61 without R12; Y1 price is the earlier web-search figure because the API has no listing for it\\ \midrule
+L2, L3 cores &  & T80-6 toroid x2 & Micrometals & T80-6 & \texttt{\footnotesize NOT AT DIGIKEY} &  &  & TME, rf-microwave.com, SV1AFN, Kits and Parts, Amidon\\
+magnet wire &  & \#16 (L2), \#24 (L1), L3 gauge TBD &  &  & \texttt{\footnotesize NOT AT DIGIKEY} &  &  & not in BOM\\
+PCB &  & bare board & JLCPCB &  & \texttt{\footnotesize NOT AT DIGIKEY} &  &  & order ENIG finish (EPC AN009 p.3)\\
+\end{longtable}

@@ -1,0 +1,20 @@
+* Coss check
+* Check Coss/Ciss vs datasheet: small-signal via ramp, gate shorted to source
+.include EPC2036_ngspice.lib
+Vd d 0 PWL(0 0 1u 100)
+Vg g 0 0
+X1 g d 0 EPC2036
+.tran 1n 1u
+.control
+run
+let coss = -i(Vd)/100e6
+meas tran c0 find coss when v(d)=0.5
+meas tran c6 find coss when v(d)=6
+meas tran c12 find coss when v(d)=12
+meas tran c50 find coss when v(d)=50
+* Qoss and energy-equivalent from 0 to 12 V
+let q = integ(-i(Vd))
+meas tran q12 find q when v(d)=12
+meas tran q42 find q when v(d)=42.7
+.endc
+.end

@@ -1,0 +1,33 @@
+# KiCad lock files
+*.lck
+~*.lck
+# KiCad autosave and backups
+_autosave-*
+*-backups/
+\#auto_saved_files\#
+*.bak
+*.bck
+*-bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*~
+*.kicad_prl
+# Caches
+fp-info-cache
+__pycache__/
+# LaTeX build files (report/report.pdf and print/cart-check.pdf are committed)
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.toc
+*SAVE-ERROR
+# ngspice raw output (regenerate with the scripts in sim/)
+*.dat
+*.dat.gz
+*.npz

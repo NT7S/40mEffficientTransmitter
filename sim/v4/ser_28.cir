@@ -1,0 +1,41 @@
+* rev D trim: Y1 in series with C9 trimmer (6.5-30p) || C20 10p => 28 pF; C5/C6 33p
+* Crystal motional model (placeholder, scaled from EMRFD 1st ed. p. 3.17 Table 3.4): Cm 13 fF, ESR 20 ohm, C0 3 pF
+.param fx=7.030e6 cm=13f
+.param lm={1/(pow(2*3.14159265*fx,2)*cm)}
+VCC vcc 0 PWL(0 0 1u 5)
+* bias network
+RB1 vcc b 47k
+RB2 b 0 22k
+RE e 0 1.5k
+CE e 0 100n
+RC vcc c 3.3k
+Q1 c b e Q2N3904
+* crystal between collector and base, load caps to ground
+LM cx xm1 {lm}
+CM xm1 xm2 {cm}
+RM xm2 ys 20
+CS9 ys b 28p
+C0X cx ys 3p
+CB b 0 33p
+CC cx 0 33p
+RS c cx 1k
+* coupling to Schmitt input, bias divider ~2.38 V
+CK c in 1n
+RT vcc in 100k
+RBT in 0 91k
+CIN in 0 4.5p
+* 74LVC1G17 behavioral: thresholds VT+ 2.7 V, VT- 1.95 V (TI typ-ish at 5 V), 5 ns slew
+BSCH sch 0 V = 2.5+2.5*tanh((v(in)-(2.7-0.75*v(sch_d)/5))/0.02)
+RSD sch sch_d 1
+CSD sch_d 0 0.2p
+.model Q2N3904 NPN(IS=6.734f XTI=3 EG=1.11 VAF=74.03 BF=416.4 NE=1.259 ISE=6.734f IKF=66.78m XTB=1.5 BR=.7371 NC=2 ISC=0 IKR=0 RC=1 CJC=3.638p MJC=.3085 VJC=.75 FC=.5 CJE=4.493p MJE=.2593 VJE=.75 TR=239.5n TF=301.2p ITF=.4 VTF=4 XTF=2 RB=10)
+
+.options reltol=1e-4
+.tran 1n 4m 3.8m 1n uic
+.control
+run
+let icc = -i(VCC)
+linearize v(c)
+wrdata ser_28.dat v(c)
+.endc
+.end

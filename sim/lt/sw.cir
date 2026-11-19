@@ -1,0 +1,19 @@
+* switch test LT mode
+.param TJ=25
+.include EPC2036_lt_tj.lib
+V1 v 0 12
+R1 v d 24
+VDRV drv 0 PULSE(0 5 0 1n 1n 70n 142n)
+RDRV drv g1 7
+LG g1 g 2n
+X1 g d 0 EPC2036
+.options reltol=1e-3
+.tran 0.05n 1u 0 0.05n
+.control
+run
+meas tran vdmin min v(d) from=500n to=1u
+meas tran vdmax max v(d) from=500n to=1u
+meas tran vgmax max v(g) from=500n to=1u
+meas tran vgmin min v(g) from=500n to=1u
+.endc
+.end

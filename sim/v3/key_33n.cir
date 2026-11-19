@@ -1,0 +1,36 @@
+* PMOS high-side keying of the PA +12 V feed, topology copied from OpenBeacon 2
+* (OB2 local netlist r.xml: Q2 AO3407A, R2 22k G-S, C4 10n G-D, R3 22k, Q1 2N7002, R1 22k pulldown)
+* PA modelled as its DC input resistance: 12.0 V / 0.441 A = 27.2 ohm (v2 trimmed sim); class E Idc scales with Vdd.
+VIN vin_src 0 12.0
+RSRC vin_src vin 0.01
+* Q2 AO3407A: level-1 fit to AOS datasheet (estimate): Vth -1.9 V (spec -1.4..-2.4), Rds(on) about 40 mOhm at Vgs -6 V,
+* about 63 mOhm at -4.5 V (spec typ 54-61, max 78); Cgs 455p + Cgd 65p = Ciss 520p, Crss 65p (fixed, estimate)
+MQ2 vpa g vin vin PAO W=1 L=1
+.model PAO PMOS(LEVEL=1 VTO=-1.9 KP=6.1 LAMBDA=0.005)
+CGS g vin 455p
+CGD g vpa 65p
+R2 vin g 22k
+C4 g vpa 33n
+R3 g nd 22k
+* Q3 2N7002 (generic level-1, estimate)
+MQ3 nd key 0 0 N7002 W=1 L=1
+.model N7002 NMOS(LEVEL=1 VTO=2.1 KP=0.3)
+R4 key 0 22k
+VKEY keysrc 0 PULSE(0 5 1m 10u 10u 15m 40m)
+RK keysrc key 100
+* PA rail: C14 0.1u, C15 10n (switched side), PA load
+C14 vpa 0 0.1u
+C15 vpa 0 10n
+RPA vpa 0 27.2
+.options reltol=1e-4
+.tran 1u 30m 0 2u
+.control
+run
+let ipa = v(vpa)/27.2
+let pq2 = (v(vin)-v(vpa))*(-i(VIN))
+meas tran vpa_on avg v(vpa) from=12m to=15m
+meas tran pq2_on avg pq2 from=12m to=15m
+linearize v(key) v(g) v(vpa) pq2
+wrdata key_33n.dat v(key) v(g) v(vpa) pq2
+.endc
+.end

@@ -1,0 +1,36 @@
+* Rev D PMOS high-side keying of the PA +12 V feed, topology copied from OpenBeacon 2
+* (OB2 local netlist r.xml: Q2 AO3407A, R2 22k G-S, C4 10n G-D, R3 22k, Q1 2N7002, R1 22k pulldown)
+* PA modelled as its DC input resistance: 12.0 V / 0.441 A = 27.2 ohm (v2 trimmed sim); class E Idc scales with Vdd.
+VIN vin_src 0 12.0
+RSRC vin_src vin 0.01
+* Q2 AO3407A: level-1 fit to AOS datasheet (estimate): Vth -1.9 V (spec -1.4..-2.4), Rds(on) about 40 mOhm at Vgs -6 V,
+* about 63 mOhm at -4.5 V (spec typ 54-61, max 78); Cgs 455p + Cgd 65p = Ciss 520p, Crss 65p (fixed, estimate)
+MQ2 vpa g vin vin PAO W=1 L=1
+.model PAO PMOS(LEVEL=1 VTO=-1.9 KP=6.1 LAMBDA=0.005)
+CGS g vin 455p
+CGD g vpa 65p
+R2 vin g 22k
+C4 g vpa 47n
+R3 g nd 22k
+* Rev D: Morse key across J4 shorts R3's free end to GND (no Q3/R4). Ideal switch, 50 mOhm closed (estimate)
+SKEY nd 0 key 0 SWK
+.model SWK SW(VT=2.5 VH=0.1 RON=0.05 ROFF=1e10)
+VKEY key 0 PULSE(0 5 1m 1u 1u 15m 40m)
+* PA rail: C14 0.1u, C15 10n (switched side), PA load
+C14 vpa 0 0.1u
+C15 vpa 0 10n
+RPA vpa 0 27.2
+.options reltol=1e-4
+.tran 1u 30m 0 2u
+.control
+run
+let ipa = v(vpa)/27.2
+let pq2 = (v(vin)-v(vpa))*(-i(VIN))
+meas tran vnd_open avg v(nd) from=25m to=30m
+meas tran vgs_on avg v(g) from=12m to=15m
+meas tran vpa_on avg v(vpa) from=12m to=15m
+meas tran pq2_on avg pq2 from=12m to=15m
+linearize v(key) v(g) v(vpa) pq2
+wrdata key_revD_47n.dat v(key) v(g) v(vpa) pq2
+.endc
+.end

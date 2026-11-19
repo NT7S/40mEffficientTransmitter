@@ -1,0 +1,16 @@
+Capacitor_SMD:CP_Elec_6.3x7.7
+Capacitor_SMD:C_Trimmer_Murata_TZC3
+Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal
+Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical
+Crystal:Crystal_SMD_HC49-SD
+Inductor_SMD:L_0603_1608Metric
+Inductor_SMD:L_Coilcraft_LPS4018
+Inductor_THT:L_Toroid_Horizontal_D12.7mm_P20.00mm_Diameter14-5mm_Amidon-T50
+Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm
+Package_BGA:EPC_BGA-4_0.9x0.9mm_Layout2x2_P0.45mm
+Package_SON:WSON-10-1EP_2x3mm_P0.5mm_EP0.84x2.4mm
+Package_TO_SOT_SMD:SOT-23
+Package_TO_SOT_SMD:SOT-23-5
+Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T1.19mm
+TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal
+TestPoint:TestPoint_Keystone_5019_Miniature

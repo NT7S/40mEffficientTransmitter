@@ -1,0 +1,46 @@
+* 40 m 5 W single-ended GaN class E PA, tank + L-match (pa40-classe.kicad_sch rev A)
+* Values from the schematic / Page; losses are estimates (see comments)
+.include EPC2036_ngspice.lib
+.param per=1.422475106685633e-07
+* Supply 12.0 V, ideal source with 10 mOhm (estimate)
+VDD vdd_src 0 12.0
+RSRC vdd_src vdd 0.01
+* C14/C15 decoupling at L1 cold end (placeholders), with 10 mOhm ESR (estimate)
+C14 vdd c14 0.1u ic=12
+RC14 c14 0 0.01
+C15 vdd c15 10n ic=12
+RC15 c15 0 0.01
+* L1 FT-50-61 26t #24, 47 uH: copper 37 mOhm (7 mW at 0.434 A, Page), core Rp 277 kOhm at 7.03 MHz (Page)
+L1 vdd l1m 47u ic=0.35
+RL1 l1m d 0.037
+RP1 vdd d 277k
+* Q1 EPC2036 (EPC model)
+XQ1 g d 0 EPC2036
+* C1 shunt (external), ESR 20 mOhm (Page estimate for C0G)
+C1 d c1m 3.1e-10
+RC1 c1m 0 0.02
+* C2 series 424.5 pF, ESR 20 mOhm
+C2 d c2m 424.5p ic=12
+RC2 c2m n2 0.02
+* L2 T-80-6 22t #16, 2.18 uH, Qu 330 at 7.03 MHz -> Rs = 0.292 Ohm (Page)
+L2 n2 l2m 2.122e-06
+RL2 l2m out 0.292
+* C3 731 pF shunt at 50 Ohm side, ESR 20 mOhm
+C3 out c3m 731p
+RC3 c3m 0 0.02
+RLOAD out 0 50
+
+* Gate drive: 74LVC1G17 at 5 V as ideal 0-5 V square, 1 ns edges, 7 Ohm output (estimate),
+* R1 = 0 Ohm, 2 nH gate loop (estimate). 50 % duty.
+VDRV drv 0 PULSE(0 5 0 1n 1n {per/2-1n} {per})
+RDRV drv g1 7
+LG g1 g 2n
+.options reltol=1e-3 itl4=100 gmin=1e-12
+.tran 0.05n 4.267425320056899e-05 0 0.05n uic
+.control
+set filetype=ascii
+run
+linearize v(d) v(g) v(out) i(VDD) i(VDRV)
+wrdata pa40_c1_310_l2_2122.dat v(d) v(g) v(out) i(VDD) i(VDRV)
+.endc
+.end
