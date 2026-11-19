@@ -1,1583 +1,6110 @@
-(export (version "E")
-  (design
-    (source "/workspace/40mEffficientTransmitter/PCB/pa40-classe.kicad_sch")
-    (date "2026-11-19T07:29:11-0800")
-    (tool "Eeschema 9.0.2+dfsg-1")
-    (sheet (number "1") (name "/") (tstamps "/")
-      (title_block
-        (title "40 m 5 W GaN class E CW TX: XO, PMOS keying, LPF")
-        (company "Etherkit / NT7S")
-        (rev "7")
-        (date "2026-11-18")
-        (source "pa40-classe.kicad_sch")
-        (comment (number "1") (value "Source: Efficient 5 W 40 m PA: options, worked example"))
-        (comment (number "2") (value "Rev 7: DC jack J1, 3.5 mm key jack J4, J2 Molex 0731000105 BNC. Rev 6 (was F): TP4-TP15, DNP D1"))
-        (comment (number "3") (value "Rev 5 (was E): SMT, TPS62175 buck. Prototype revs 1-6 were A-F"))
-        (comment (number "4") (value ""))
-        (comment (number "5") (value ""))
-        (comment (number "6") (value ""))
-        (comment (number "7") (value ""))
-        (comment (number "8") (value ""))
-        (comment (number "9") (value "")))))
-  (components
-    (comp (ref "C1")
-      (value "285p C0G")
-      (footprint "Capacitor_SMD:C_1206_3216Metric")
-      (fields
-        (field (name "MPN") "KEMET C1206C271J1GACTU + C1206C150J1GACTU")
-        (field (name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "KEMET C1206C271J1GACTU + C1206C150J1GACTU"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "4d6a5625-8644-4edb-9d2e-1a42e6ecc9b2"))
-    (comp (ref "C2")
-      (value "424.5p C0G")
-      (footprint "Capacitor_SMD:C_1206_3216Metric")
-      (fields
-        (field (name "MPN") "KEMET C1206C391J2GACTU + C1206C330J2GACTU")
-        (field (name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "KEMET C1206C391J2GACTU + C1206C330J2GACTU"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "df04e52c-6609-48a4-b02d-365684eab74f"))
-    (comp (ref "C3")
-      (value "731p C0G")
-      (footprint "Capacitor_SMD:C_1206_3216Metric")
-      (fields
-        (field (name "MPN") "KEMET C1206C681J1GACTU + C1206C510J1GACTU")
-        (field (name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "KEMET C1206C681J1GACTU + C1206C510J1GACTU"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "ce7d1cc9-4171-4cf1-9897-bd927a096f22"))
-    (comp (ref "C4")
-      (value "47n X7R")
-      (footprint "Capacitor_SMD:C_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Samsung CL10B473KB8NNNC")
-        (field (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "Samsung CL10B473KB8NNNC"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "ddcc5aa4-2335-40c4-a52a-5b4881108481"))
-    (comp (ref "C5")
-      (value "33p C0G")
-      (footprint "Capacitor_SMD:C_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Murata GRM1885C1H330JA01D")
-        (field (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "Murata GRM1885C1H330JA01D"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "293129c1-6e44-423c-a1e2-e807d3e21040"))
-    (comp (ref "C6")
-      (value "33p C0G")
-      (footprint "Capacitor_SMD:C_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Murata GRM1885C1H330JA01D")
-        (field (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "Murata GRM1885C1H330JA01D"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "c327ba84-21da-44b7-baef-2c1a86c7e1df"))
-    (comp (ref "C7")
-      (value "100n X7R")
-      (footprint "Capacitor_SMD:C_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Yageo CC0603KRX7R9BB104")
-        (field (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "Yageo CC0603KRX7R9BB104"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "95e7d9e1-2e19-4d49-ba48-cab74e703c79"))
-    (comp (ref "C8")
-      (value "1n C0G")
-      (footprint "Capacitor_SMD:C_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Murata GRM1885C1H102JA01D")
-        (field (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "Murata GRM1885C1H102JA01D"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "f7bad024-92b4-48e6-a8e4-47d00d3e86b7"))
-    (comp (ref "C9")
-      (value "5.5-30p")
-      (footprint "pa40:C_Trimmer_Voltronics_JZ")
-      (fields
-        (field (name "MPN") "Knowles Voltronics JZ300")
-        (field (name "Footprint") "pa40:C_Trimmer_Voltronics_JZ")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Trim_Small") (description "Trimmable capacitor, small symbol"))
-      (property (name "MPN") (value "Knowles Voltronics JZ300"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "trimmer variable capacitor"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "d5d72c55-7bef-47bd-9bb7-c80f1777eada"))
-    (comp (ref "C10")
-      (value "100u")
-      (footprint "Capacitor_SMD:CP_Elec_6.3x7.7")
-      (fields
-        (field (name "MPN") "Panasonic EEE-FK1E101P")
-        (field (name "Footprint") "Capacitor_SMD:CP_Elec_6.3x7.7")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "Panasonic EEE-FK1E101P"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "287ca124-5a67-4079-8228-a21d60435b4a"))
-    (comp (ref "C11")
-      (value "1u X7R")
-      (footprint "Capacitor_SMD:C_0805_2012Metric")
-      (fields
-        (field (name "MPN") "Yageo CC0805KKX7R8BB105")
-        (field (name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "Yageo CC0805KKX7R8BB105"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "86ca371e-eba0-44b0-b1ea-aa1e5b69723c"))
-    (comp (ref "C12")
-      (value "10n C0G")
-      (footprint "Capacitor_SMD:C_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Yageo CC0603JRNPO9BN103")
-        (field (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "Yageo CC0603JRNPO9BN103"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "1e185db7-1fba-4ffe-99a7-3e21cff0c1d0"))
-    (comp (ref "C13")
-      (value "0.1u X7R")
-      (footprint "Capacitor_SMD:C_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Yageo CC0603KRX7R9BB104")
-        (field (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "Yageo CC0603KRX7R9BB104"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "4acaa2c2-db53-4d8d-8f22-fab48f0ffdfb"))
-    (comp (ref "C14")
-      (value "0.1u X7R")
-      (footprint "Capacitor_SMD:C_0805_2012Metric")
-      (fields
-        (field (name "MPN") "Samsung CL21B104KBCNNNC")
-        (field (name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "Samsung CL21B104KBCNNNC"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "c1fb0d19-1d17-414e-9ceb-1100bea4bac5"))
-    (comp (ref "C15")
-      (value "10n C0G")
-      (footprint "Capacitor_SMD:C_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Yageo CC0603JRNPO9BN103")
-        (field (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "Yageo CC0603JRNPO9BN103"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "6c86639b-736d-4b80-8a29-bbe0aed03237"))
-    (comp (ref "C16")
-      (value "270p C0G")
-      (footprint "Capacitor_SMD:C_1206_3216Metric")
-      (fields
-        (field (name "MPN") "KEMET C1206C271J1GACTU")
-        (field (name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "KEMET C1206C271J1GACTU"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "02c5ac2d-5f38-467d-8239-9f99127015c7"))
-    (comp (ref "C17")
-      (value "150p C0G")
-      (footprint "Capacitor_SMD:C_1206_3216Metric")
-      (fields
-        (field (name "MPN") "KEMET C1206C151J1GACTU")
-        (field (name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "KEMET C1206C151J1GACTU"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "7962b6c0-e025-431f-a3d9-d47b1c4d39d0"))
-    (comp (ref "C18")
-      (value "18p C0G")
-      (footprint "Capacitor_SMD:C_1206_3216Metric")
-      (fields
-        (field (name "MPN") "KEMET C1206C180J1GACTU")
-        (field (name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "KEMET C1206C180J1GACTU"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "89d78354-124a-4744-ac2e-a6de95c7e73d"))
-    (comp (ref "C19")
-      (value "270p C0G")
-      (footprint "Capacitor_SMD:C_1206_3216Metric")
-      (fields
-        (field (name "MPN") "KEMET C1206C271J1GACTU")
-        (field (name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "KEMET C1206C271J1GACTU"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "63b5b3bb-8401-448e-bdcc-a54d3c297b3b"))
-    (comp (ref "C20")
-      (value "10p C0G")
-      (footprint "Capacitor_SMD:C_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Murata GRM1885C1H100JA01D")
-        (field (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "Murata GRM1885C1H100JA01D"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "51deb2dd-38d9-4887-b718-0e30dc9eb272"))
-    (comp (ref "C21")
-      (value "2.2u 50V X5R")
-      (footprint "Capacitor_SMD:C_0805_2012Metric")
-      (fields
-        (field (name "MPN") "Yageo CC0805KKX5R9BB225")
-        (field (name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "Yageo CC0805KKX5R9BB225"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "57beedab-c10f-49ad-bdf9-5ae265060dd5"))
-    (comp (ref "C22")
-      (value "22u 10V X5R")
-      (footprint "Capacitor_SMD:C_0805_2012Metric")
-      (fields
-        (field (name "MPN") "Samsung CL21A226MOQNNNE")
-        (field (name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "Samsung CL21A226MOQNNNE"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "3edb8747-5993-47d9-b8b1-fb30c6bd2a50"))
-    (comp (ref "C23")
-      (value "10u 10V X5R")
-      (footprint "Capacitor_SMD:C_0805_2012Metric")
-      (fields
-        (field (name "MPN") "Yageo CC0805KRX5R6BB106")
-        (field (name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "C_Small") (description "Unpolarized capacitor, small symbol"))
-      (property (name "MPN") (value "Yageo CC0805KRX5R6BB106"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "capacitor cap"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "ee99c0fc-8d4e-4af1-bc82-90d50aab648a"))
-    (comp (ref "D1")
-      (value "DNP clamp")
-      (footprint "pa40:D_SOT-23_A1_K3")
-      (fields
-        (field (name "MPN") "DNP: SOT-23 A1/K3 footprint, see note 15")
-        (field (name "Footprint") "pa40:D_SOT-23_A1_K3")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "D_Zener_Small") (description "Zener diode, small symbol"))
-      (property (name "MPN") (value "DNP: SOT-23 A1/K3 footprint, see note 15"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "dnp"))
-      (property (name "ki_keywords") (value "diode"))
-      (property (name "ki_fp_filters") (value "TO-???* *_Diode_* *SingleDiode* D_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "4a007707-8f5d-4aba-9953-4a666cc9d464"))
-    (comp (ref "FB2")
-      (value "BLM18PG221")
-      (footprint "Inductor_SMD:L_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Murata BLM18PG221SN1D")
-        (field (name "Footprint") "Inductor_SMD:L_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "FerriteBead_Small") (description "Ferrite bead, small symbol"))
-      (property (name "MPN") (value "Murata BLM18PG221SN1D"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "L ferrite bead inductor filter"))
-      (property (name "ki_fp_filters") (value "Inductor_* L_* *Ferrite*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "dadf58f6-ff99-419d-b153-695fc1e2099d"))
-    (comp (ref "FB3")
-      (value "BLM18PG221")
-      (footprint "Inductor_SMD:L_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Murata BLM18PG221SN1D")
-        (field (name "Footprint") "Inductor_SMD:L_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "FerriteBead_Small") (description "Ferrite bead, small symbol"))
-      (property (name "MPN") (value "Murata BLM18PG221SN1D"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "L ferrite bead inductor filter"))
-      (property (name "ki_fp_filters") (value "Inductor_* L_* *Ferrite*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "9975a4b2-9652-42cc-a971-356b67555908"))
-    (comp (ref "J1")
-      (value "12.0 V in, center +")
-      (footprint "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal")
-      (fields
-        (field (name "MPN") "Same Sky PJ-102AH")
-        (field (name "Footprint") "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "Barrel_Jack_Switch") (description "DC Barrel Jack with an internal switch"))
-      (property (name "MPN") (value "Same Sky PJ-102AH"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "DC power barrel jack connector"))
-      (property (name "ki_fp_filters") (value "BarrelJack*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "ef642cd3-e271-4a16-bad5-54c4d81f48e9"))
-    (comp (ref "J2")
-      (value "RF out, 50 Ω")
-      (footprint "pa40:BNC_Molex_73100-0105_Horizontal")
-      (fields
-        (field (name "MPN") "Molex 0731000105")
-        (field (name "Footprint") "pa40:BNC_Molex_73100-0105_Horizontal")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "Conn_Coaxial") (description "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"))
-      (property (name "MPN") (value "Molex 0731000105"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "BNC SMA SMB SMC LEMO coaxial connector CINCH RCA MCX MMCX U.FL UMRF"))
-      (property (name "ki_fp_filters") (value "*BNC* *SMA* *SMB* *SMC* *Cinch* *LEMO* *UMRF* *MCX* *U.FL*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "f395fba6-3c33-4c73-9903-b188ddbf4ece"))
-    (comp (ref "J4")
-      (value "KEY 3.5 mm")
-      (footprint "pa40:Jack_3.5mm_CUI_SJ1-3523N_Horizontal_DS")
-      (fields
-        (field (name "MPN") "Same Sky SJ1-3523N")
-        (field (name "Footprint") "pa40:Jack_3.5mm_CUI_SJ1-3523N_Horizontal_DS")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector_Audio") (part "AudioJack3") (description "Audio Jack, 3 Poles (Stereo / TRS)"))
-      (property (name "MPN") (value "Same Sky SJ1-3523N"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "audio jack receptacle stereo headphones phones TRS connector"))
-      (property (name "ki_fp_filters") (value "Jack*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "1a4efdd5-6385-4514-8e6d-4c84de46f5c2"))
-    (comp (ref "JP1")
-      (value "DNP shunt: close JP1")
-      (footprint "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm")
-      (fields
-        (field (name "MPN"))
-        (field (name "Footprint") "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Jumper") (part "SolderJumper_2_Open") (description "Solder Jumper, 2-pole, open"))
-      (property (name "MPN") (value ""))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "solder jumper SPST"))
-      (property (name "ki_fp_filters") (value "SolderJumper*Open*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "0ff092ba-a6c5-45b4-91ca-df85f5d15704"))
-    (comp (ref "L1")
-      (value "47u FT50-61 26t #24")
-      (footprint "pa40:L_Toroid_FT50_Flat_P7.62mm_Drill1.0mm")
-      (fields
-        (field (name "MPN") "Fair-Rite 5961000301 (FT-50-61)")
-        (field (name "Footprint") "pa40:L_Toroid_FT50_Flat_P7.62mm_Drill1.0mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "L_Small") (description "Inductor, small symbol"))
-      (property (name "MPN") (value "Fair-Rite 5961000301 (FT-50-61)"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "inductor choke coil reactor magnetic"))
-      (property (name "ki_fp_filters") (value "Choke_* *Coil* Inductor_* L_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "b6be22eb-2cae-4231-95e8-70eec740ff12"))
-    (comp (ref "L2")
-      (value "2.18u T80-6 22t #16")
-      (footprint "pa40:L_Toroid_T80_Flat_P10.16mm_Drill1.6mm")
-      (fields
-        (field (name "MPN") "Micrometals T80-6")
-        (field (name "Footprint") "pa40:L_Toroid_T80_Flat_P10.16mm_Drill1.6mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "L_Small") (description "Inductor, small symbol"))
-      (property (name "MPN") (value "Micrometals T80-6"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "inductor choke coil reactor magnetic"))
-      (property (name "ki_fp_filters") (value "Choke_* *Coil* Inductor_* L_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "d76b69fb-6424-4d3c-b296-5603f279625a"))
-    (comp (ref "L3")
-      (value "0.76u T80-6 13t")
-      (footprint "pa40:L_Toroid_T80_Flat_P10.16mm_Drill1.6mm")
-      (fields
-        (field (name "MPN") "Micrometals T80-6")
-        (field (name "Footprint") "pa40:L_Toroid_T80_Flat_P10.16mm_Drill1.6mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "L_Small") (description "Inductor, small symbol"))
-      (property (name "MPN") (value "Micrometals T80-6"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "inductor choke coil reactor magnetic"))
-      (property (name "ki_fp_filters") (value "Choke_* *Coil* Inductor_* L_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "6d7f42b4-a61e-427b-bfe1-672411255840"))
-    (comp (ref "L4")
-      (value "10u")
-      (footprint "Inductor_SMD:L_Coilcraft_LPS4018")
-      (fields
-        (field (name "MPN") "Wurth 74404042100")
-        (field (name "Footprint") "Inductor_SMD:L_Coilcraft_LPS4018")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "L_Small") (description "Inductor, small symbol"))
-      (property (name "MPN") (value "Wurth 74404042100"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "inductor choke coil reactor magnetic"))
-      (property (name "ki_fp_filters") (value "Choke_* *Coil* Inductor_* L_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "6dcd0523-5cd2-4dbb-b8ec-4c7d6ec1df56"))
-    (comp (ref "Q1")
-      (value "EPC2036")
-      (footprint "pa40:EPC2036_LGA4_SMD_P0.45mm")
-      (fields
-        (field (name "MPN") "EPC EPC2036")
-        (field (name "Footprint") "pa40:EPC2036_LGA4_SMD_P0.45mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "pa40") (part "EPC2036") (description "N-MOSFET transistor"))
-      (property (name "MPN") (value "EPC EPC2036"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "NMOS N-MOS"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "14b92e05-49ab-4412-876d-7b48f35ebc11"))
-    (comp (ref "Q2")
-      (value "AO3407A")
-      (footprint "Package_TO_SOT_SMD:SOT-23")
-      (fields
-        (field (name "MPN") "AOS AO3407A")
-        (field (name "Footprint") "Package_TO_SOT_SMD:SOT-23")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "pa40") (part "Q_PMOS_GSD") (description "P-MOSFET transistor"))
-      (property (name "MPN") (value "AOS AO3407A"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "PMOS P-MOS"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "21100e4e-5aaa-4daf-a6ec-16d5c67e649a"))
-    (comp (ref "Q4")
-      (value "MMBT3904")
-      (footprint "Package_TO_SOT_SMD:SOT-23")
-      (fields
-        (field (name "MPN") "onsemi MMBT3904LT1G")
-        (field (name "Footprint") "Package_TO_SOT_SMD:SOT-23")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "pa40") (part "Q_NPN_BEC") (description "NPN bipolar junction transistor"))
-      (property (name "MPN") (value "onsemi MMBT3904LT1G"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "BJT"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "326265dc-38d6-4166-ab33-499917f93377"))
-    (comp (ref "R1")
-      (value "0R")
-      (footprint "Resistor_SMD:R_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Yageo RC0603JR-070RL")
-        (field (name "Footprint") "Resistor_SMD:R_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "R_Small_US") (description "Resistor, small US symbol"))
-      (property (name "MPN") (value "Yageo RC0603JR-070RL"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "r resistor"))
-      (property (name "ki_fp_filters") (value "R_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "d34c6de7-2652-4d47-87e5-3296213f2984"))
-    (comp (ref "R2")
-      (value "22k")
-      (footprint "Resistor_SMD:R_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Stackpole RMCF0603FT22K0")
-        (field (name "Footprint") "Resistor_SMD:R_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "R_Small_US") (description "Resistor, small US symbol"))
-      (property (name "MPN") (value "Stackpole RMCF0603FT22K0"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "r resistor"))
-      (property (name "ki_fp_filters") (value "R_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "2e5c73de-43d1-434e-905f-f105b72f631c"))
-    (comp (ref "R3")
-      (value "22k")
-      (footprint "Resistor_SMD:R_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Stackpole RMCF0603FT22K0")
-        (field (name "Footprint") "Resistor_SMD:R_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "R_Small_US") (description "Resistor, small US symbol"))
-      (property (name "MPN") (value "Stackpole RMCF0603FT22K0"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "r resistor"))
-      (property (name "ki_fp_filters") (value "R_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "97346494-e33d-4a3d-861c-f5b9c172a332"))
-    (comp (ref "R5")
-      (value "47k")
-      (footprint "Resistor_SMD:R_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Yageo RC0603FR-0747KL")
-        (field (name "Footprint") "Resistor_SMD:R_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "R_Small_US") (description "Resistor, small US symbol"))
-      (property (name "MPN") (value "Yageo RC0603FR-0747KL"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "r resistor"))
-      (property (name "ki_fp_filters") (value "R_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "fdc11fc1-1b1c-499a-941e-5f8d7b052dad"))
-    (comp (ref "R6")
-      (value "22k")
-      (footprint "Resistor_SMD:R_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Stackpole RMCF0603FT22K0")
-        (field (name "Footprint") "Resistor_SMD:R_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "R_Small_US") (description "Resistor, small US symbol"))
-      (property (name "MPN") (value "Stackpole RMCF0603FT22K0"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "r resistor"))
-      (property (name "ki_fp_filters") (value "R_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "d38f705c-3f3b-4670-a13a-7be5c36dc7e3"))
-    (comp (ref "R7")
-      (value "1.5k")
-      (footprint "Resistor_SMD:R_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Yageo RC0603FR-071K5L")
-        (field (name "Footprint") "Resistor_SMD:R_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "R_Small_US") (description "Resistor, small US symbol"))
-      (property (name "MPN") (value "Yageo RC0603FR-071K5L"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "r resistor"))
-      (property (name "ki_fp_filters") (value "R_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "e1c1a239-299d-4d50-aa55-8e1b9e15f4fb"))
-    (comp (ref "R8")
-      (value "3.3k")
-      (footprint "Resistor_SMD:R_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Yageo RC0603FR-073K3L")
-        (field (name "Footprint") "Resistor_SMD:R_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "R_Small_US") (description "Resistor, small US symbol"))
-      (property (name "MPN") (value "Yageo RC0603FR-073K3L"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "r resistor"))
-      (property (name "ki_fp_filters") (value "R_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "def5a8fa-9d53-4d94-955c-08b3ebba2e2b"))
-    (comp (ref "R9")
-      (value "1k")
-      (footprint "Resistor_SMD:R_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Yageo RC0603FR-071KL")
-        (field (name "Footprint") "Resistor_SMD:R_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "R_Small_US") (description "Resistor, small US symbol"))
-      (property (name "MPN") (value "Yageo RC0603FR-071KL"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "r resistor"))
-      (property (name "ki_fp_filters") (value "R_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "bc685e39-9e45-465a-902c-70d921020531"))
-    (comp (ref "R10")
-      (value "100k")
-      (footprint "Resistor_SMD:R_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Stackpole RMCF0603FT100K")
-        (field (name "Footprint") "Resistor_SMD:R_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "R_Small_US") (description "Resistor, small US symbol"))
-      (property (name "MPN") (value "Stackpole RMCF0603FT100K"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "r resistor"))
-      (property (name "ki_fp_filters") (value "R_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "a098af07-c9af-4abf-a99f-7d8875d30071"))
-    (comp (ref "R11")
-      (value "91k")
-      (footprint "Resistor_SMD:R_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Yageo RC0603FR-0791KL")
-        (field (name "Footprint") "Resistor_SMD:R_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "R_Small_US") (description "Resistor, small US symbol"))
-      (property (name "MPN") (value "Yageo RC0603FR-0791KL"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "r resistor"))
-      (property (name "ki_fp_filters") (value "R_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "4234272b-c89a-4b75-8ab0-8a49293ba0df"))
-    (comp (ref "R12")
-      (value "10m 1%")
-      (footprint "Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T1.19mm")
-      (fields
-        (field (name "MPN") "Vishay WSK2512R0100FEA")
-        (field (name "Footprint") "Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T1.19mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "R_Shunt") (description "Shunt resistor"))
-      (property (name "MPN") (value "Vishay WSK2512R0100FEA"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "R res shunt resistor"))
-      (property (name "ki_fp_filters") (value "R_*Shunt*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "0b0f4643-3ee4-4520-a7ba-a6a68028d467"))
-    (comp (ref "R13")
-      (value "523k 1%")
-      (footprint "Resistor_SMD:R_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Yageo RC0603FR-07523KL")
-        (field (name "Footprint") "Resistor_SMD:R_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "R_Small_US") (description "Resistor, small US symbol"))
-      (property (name "MPN") (value "Yageo RC0603FR-07523KL"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "r resistor"))
-      (property (name "ki_fp_filters") (value "R_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "bb764453-5fe2-434d-9d12-1284462a0d0b"))
-    (comp (ref "R14")
-      (value "100k 1%")
-      (footprint "Resistor_SMD:R_0603_1608Metric")
-      (fields
-        (field (name "MPN") "Stackpole RMCF0603FT100K")
-        (field (name "Footprint") "Resistor_SMD:R_0603_1608Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "R_Small_US") (description "Resistor, small US symbol"))
-      (property (name "MPN") (value "Stackpole RMCF0603FT100K"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "r resistor"))
-      (property (name "ki_fp_filters") (value "R_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "6173cddc-ddc5-4503-9395-072d6624d654"))
-    (comp (ref "TP1")
-      (value "I+")
-      (footprint "TestPoint:TestPoint_Keystone_5019_Miniature")
-      (fields
-        (field (name "MPN") "Keystone 5019")
-        (field (name "Footprint") "TestPoint:TestPoint_Keystone_5019_Miniature")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
-      (property (name "MPN") (value "Keystone 5019"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "47d3e258-8b10-4c77-a63a-c88722f61120"))
-    (comp (ref "TP2")
-      (value "I-")
-      (footprint "TestPoint:TestPoint_Keystone_5019_Miniature")
-      (fields
-        (field (name "MPN") "Keystone 5019")
-        (field (name "Footprint") "TestPoint:TestPoint_Keystone_5019_Miniature")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
-      (property (name "MPN") (value "Keystone 5019"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "63721c1d-db38-4358-97ea-b0f2e76b607e"))
-    (comp (ref "TP3")
-      (value "GND")
-      (footprint "TestPoint:TestPoint_Keystone_5019_Miniature")
-      (fields
-        (field (name "MPN") "Keystone 5019")
-        (field (name "Footprint") "TestPoint:TestPoint_Keystone_5019_Miniature")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
-      (property (name "MPN") (value "Keystone 5019"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "02aca581-3854-4c7e-bbc3-3ed85dd39f3a"))
-    (comp (ref "TP4")
-      (value "gate")
-      (footprint "TestPoint:TestPoint_Pad_D1.0mm")
-      (fields
-        (field (name "MPN") "bare pad, no part")
-        (field (name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
-      (property (name "MPN") (value "bare pad, no part"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "exclude_from_bom"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "a946a2b5-7312-4d3c-bc55-b5158359f5c1"))
-    (comp (ref "TP5")
-      (value "GND")
-      (footprint "TestPoint:TestPoint_Pad_D1.5mm")
-      (fields
-        (field (name "MPN") "bare pad, no part")
-        (field (name "Footprint") "TestPoint:TestPoint_Pad_D1.5mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
-      (property (name "MPN") (value "bare pad, no part"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "exclude_from_bom"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "a4c4ac83-b8f9-4a92-b8eb-a66d6873ce3e"))
-    (comp (ref "TP6")
-      (value "drain")
-      (footprint "TestPoint:TestPoint_Pad_D1.0mm")
-      (fields
-        (field (name "MPN") "bare pad, no part")
-        (field (name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
-      (property (name "MPN") (value "bare pad, no part"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "exclude_from_bom"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "45179124-2350-4467-8fee-fc5973f88c64"))
-    (comp (ref "TP7")
-      (value "GND")
-      (footprint "TestPoint:TestPoint_Pad_D1.5mm")
-      (fields
-        (field (name "MPN") "bare pad, no part")
-        (field (name "Footprint") "TestPoint:TestPoint_Pad_D1.5mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
-      (property (name "MPN") (value "bare pad, no part"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "exclude_from_bom"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "81431f92-becb-432c-8b61-89b824648fdb"))
-    (comp (ref "TP8")
-      (value "xo")
-      (footprint "TestPoint:TestPoint_Pad_D1.0mm")
-      (fields
-        (field (name "MPN") "bare pad, no part")
-        (field (name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
-      (property (name "MPN") (value "bare pad, no part"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "exclude_from_bom"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "7bd650a9-a466-44dd-b36e-3b12594fa349"))
-    (comp (ref "TP9")
-      (value "GND")
-      (footprint "TestPoint:TestPoint_Pad_D1.5mm")
-      (fields
-        (field (name "MPN") "bare pad, no part")
-        (field (name "Footprint") "TestPoint:TestPoint_Pad_D1.5mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
-      (property (name "MPN") (value "bare pad, no part"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "exclude_from_bom"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "2bed3d34-1dc5-473b-808e-95c4e3908b32"))
-    (comp (ref "TP10")
-      (value "out_50r")
-      (footprint "TestPoint:TestPoint_Pad_D1.0mm")
-      (fields
-        (field (name "MPN") "bare pad, no part")
-        (field (name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
-      (property (name "MPN") (value "bare pad, no part"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "exclude_from_bom"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "574773c1-77f3-417e-bc01-53d358d5bf28"))
-    (comp (ref "TP11")
-      (value "GND")
-      (footprint "TestPoint:TestPoint_Pad_D1.5mm")
-      (fields
-        (field (name "MPN") "bare pad, no part")
-        (field (name "Footprint") "TestPoint:TestPoint_Pad_D1.5mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
-      (property (name "MPN") (value "bare pad, no part"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "exclude_from_bom"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "ba202157-1155-4509-b65b-8d8de8fa39a2"))
-    (comp (ref "TP12")
-      (value "+5V")
-      (footprint "TestPoint:TestPoint_Keystone_5019_Miniature")
-      (fields
-        (field (name "MPN") "Keystone 5019")
-        (field (name "Footprint") "TestPoint:TestPoint_Keystone_5019_Miniature")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
-      (property (name "MPN") (value "Keystone 5019"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "8d269cdd-b544-436b-9046-90f609a5ebdd"))
-    (comp (ref "TP13")
-      (value "GND")
-      (footprint "TestPoint:TestPoint_Keystone_5019_Miniature")
-      (fields
-        (field (name "MPN") "Keystone 5019")
-        (field (name "Footprint") "TestPoint:TestPoint_Keystone_5019_Miniature")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
-      (property (name "MPN") (value "Keystone 5019"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "6679383b-b2ee-411d-ba2e-391fa31db8fa"))
-    (comp (ref "TP14")
-      (value "PA rail")
-      (footprint "TestPoint:TestPoint_Keystone_5019_Miniature")
-      (fields
-        (field (name "MPN") "Keystone 5019")
-        (field (name "Footprint") "TestPoint:TestPoint_Keystone_5019_Miniature")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
-      (property (name "MPN") (value "Keystone 5019"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "01dd5b7e-3544-42aa-bd91-9d241aa636ce"))
-    (comp (ref "TP15")
-      (value "Q2 gate")
-      (footprint "TestPoint:TestPoint_Keystone_5019_Miniature")
-      (fields
-        (field (name "MPN") "Keystone 5019")
-        (field (name "Footprint") "TestPoint:TestPoint_Keystone_5019_Miniature")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Connector") (part "TestPoint") (description "test point"))
-      (property (name "MPN") (value "Keystone 5019"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "8945390c-f174-4526-a853-e675be894340"))
-    (comp (ref "U1")
-      (value "74LVC1G17")
-      (footprint "Package_TO_SOT_SMD:SOT-23-5")
-      (fields
-        (field (name "MPN") "TI SN74LVC1G17DBVR")
-        (field (name "Footprint") "Package_TO_SOT_SMD:SOT-23-5")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "74xGxx") (part "74LVC1G17") (description "Single Schmitt Buffer Gate, Low-Voltage CMOS"))
-      (property (name "MPN") (value "TI SN74LVC1G17DBVR"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "Single Gate Buff Schmitt LVC CMOS"))
-      (property (name "ki_fp_filters") (value "SOT?23* SOT?553* Texas?R-PDSO-G5?DCK* Texas?R-PDSO-N5?DRL* Texas?X2SON*0.8x0.8mm*P0.48mm*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "6af2a844-c039-43b7-9c1e-ef158cd16da2"))
-    (comp (ref "U2")
-      (value "TPS62175")
-      (footprint "Package_SON:WSON-10-1EP_2x3mm_P0.5mm_EP0.84x2.4mm")
-      (fields
-        (field (name "MPN") "TI TPS62175DQCR")
-        (field (name "Footprint") "Package_SON:WSON-10-1EP_2x3mm_P0.5mm_EP0.84x2.4mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "pa40") (part "TPS62175") (description "TI TPS62175 28 V 0.5 A step-down converter, adjustable, WSON-10 (pinout SLVSB35C)"))
-      (property (name "MPN") (value "TI TPS62175DQCR"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "43eb522a-f931-4cba-808a-3833cbcb0cd5"))
-    (comp (ref "Y1")
-      (value "7.030 MHz")
-      (footprint "pa40:Crystal_HC49-US_THT_SMD_Combo")
-      (fields
-        (field (name "MPN") "IQD LFXTAL011525Bulk (HC-49/U, CL 30 pF)")
-        (field (name "Footprint") "pa40:Crystal_HC49-US_THT_SMD_Combo")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "Device") (part "Crystal_Small") (description "Two pin crystal, small symbol"))
-      (property (name "MPN") (value "IQD LFXTAL011525Bulk (HC-49/U, CL 30 pF)"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "pa40-classe.kicad_sch"))
-      (property (name "ki_keywords") (value "quartz ceramic resonator oscillator"))
-      (property (name "ki_fp_filters") (value "Crystal*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "300f2032-887e-4850-ad8e-97c0c00b51d1")))
-  (libparts
-    (libpart (lib "74xGxx") (part "74LVC1G17")
-      (description "Single Schmitt Buffer Gate, Low-Voltage CMOS")
-      (docs "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf")
-      (footprints
-        (fp "SOT?23*")
-        (fp "SOT?553*")
-        (fp "Texas?R-PDSO-G5?DCK*")
-        (fp "Texas?R-PDSO-N5?DRL*")
-        (fp "Texas?X2SON*0.8x0.8mm*P0.48mm*"))
-      (fields
-        (field (name "Reference") "U")
-        (field (name "Value") "74LVC1G17")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf")
-        (field (name "Description") "Single Schmitt Buffer Gate, Low-Voltage CMOS"))
-      (pins
-        (pin (num "1") (name "NC") (type "no_connect"))
-        (pin (num "2") (name "") (type "input"))
-        (pin (num "3") (name "GND") (type "power_in"))
-        (pin (num "4") (name "") (type "output"))
-        (pin (num "5") (name "VCC") (type "power_in"))))
-    (libpart (lib "Connector") (part "Barrel_Jack_Switch")
-      (description "DC Barrel Jack with an internal switch")
-      (docs "~")
-      (footprints
-        (fp "BarrelJack*"))
-      (fields
-        (field (name "Reference") "J")
-        (field (name "Value") "Barrel_Jack_Switch")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "DC Barrel Jack with an internal switch"))
-      (pins
-        (pin (num "1") (name "") (type "passive"))
-        (pin (num "2") (name "") (type "passive"))
-        (pin (num "3") (name "") (type "passive"))))
-    (libpart (lib "Connector") (part "Conn_Coaxial")
-      (description "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)")
-      (docs "~")
-      (footprints
-        (fp "*BNC*")
-        (fp "*SMA*")
-        (fp "*SMB*")
-        (fp "*SMC*")
-        (fp "*Cinch*")
-        (fp "*LEMO*")
-        (fp "*UMRF*")
-        (fp "*MCX*")
-        (fp "*U.FL*"))
-      (fields
-        (field (name "Reference") "J")
-        (field (name "Value") "Conn_Coaxial")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"))
-      (pins
-        (pin (num "1") (name "In") (type "passive"))
-        (pin (num "2") (name "Ext") (type "passive"))))
-    (libpart (lib "Connector") (part "TestPoint")
-      (description "test point")
-      (docs "~")
-      (footprints
-        (fp "Pin*")
-        (fp "Test*"))
-      (fields
-        (field (name "Reference") "TP")
-        (field (name "Value") "TestPoint")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "test point"))
-      (pins
-        (pin (num "1") (name "1") (type "passive"))))
-    (libpart (lib "Connector_Audio") (part "AudioJack3")
-      (description "Audio Jack, 3 Poles (Stereo / TRS)")
-      (docs "~")
-      (footprints
-        (fp "Jack*"))
-      (fields
-        (field (name "Reference") "J")
-        (field (name "Value") "AudioJack3")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "Audio Jack, 3 Poles (Stereo / TRS)"))
-      (pins
-        (pin (num "R") (name "") (type "passive"))
-        (pin (num "S") (name "") (type "passive"))
-        (pin (num "T") (name "") (type "passive"))))
-    (libpart (lib "Device") (part "C_Small")
-      (description "Unpolarized capacitor, small symbol")
-      (docs "~")
-      (footprints
-        (fp "C_*"))
-      (fields
-        (field (name "Reference") "C")
-        (field (name "Value") "C_Small")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "Unpolarized capacitor, small symbol"))
-      (pins
-        (pin (num "1") (name "") (type "passive"))
-        (pin (num "2") (name "") (type "passive"))))
-    (libpart (lib "Device") (part "C_Trim_Small")
-      (description "Trimmable capacitor, small symbol")
-      (docs "~")
-      (footprints
-        (fp "C_*"))
-      (fields
-        (field (name "Reference") "C")
-        (field (name "Value") "C_Trim_Small")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "Trimmable capacitor, small symbol"))
-      (pins
-        (pin (num "1") (name "") (type "passive"))
-        (pin (num "2") (name "") (type "passive"))))
-    (libpart (lib "Device") (part "Crystal_Small")
-      (description "Two pin crystal, small symbol")
-      (docs "~")
-      (footprints
-        (fp "Crystal*"))
-      (fields
-        (field (name "Reference") "Y")
-        (field (name "Value") "Crystal_Small")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "Two pin crystal, small symbol"))
-      (pins
-        (pin (num "1") (name "1") (type "passive"))
-        (pin (num "2") (name "2") (type "passive"))))
-    (libpart (lib "Device") (part "D_Zener_Small")
-      (description "Zener diode, small symbol")
-      (docs "~")
-      (footprints
-        (fp "TO-???*")
-        (fp "*_Diode_*")
-        (fp "*SingleDiode*")
-        (fp "D_*"))
-      (fields
-        (field (name "Reference") "D")
-        (field (name "Value") "D_Zener_Small")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "Zener diode, small symbol"))
-      (pins
-        (pin (num "1") (name "K") (type "passive"))
-        (pin (num "2") (name "A") (type "passive"))))
-    (libpart (lib "Device") (part "FerriteBead_Small")
-      (description "Ferrite bead, small symbol")
-      (docs "~")
-      (footprints
-        (fp "Inductor_*")
-        (fp "L_*")
-        (fp "*Ferrite*"))
-      (fields
-        (field (name "Reference") "FB")
-        (field (name "Value") "FerriteBead_Small")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "Ferrite bead, small symbol"))
-      (pins
-        (pin (num "1") (name "") (type "passive"))
-        (pin (num "2") (name "") (type "passive"))))
-    (libpart (lib "Device") (part "L_Small")
-      (description "Inductor, small symbol")
-      (docs "~")
-      (footprints
-        (fp "Choke_*")
-        (fp "*Coil*")
-        (fp "Inductor_*")
-        (fp "L_*"))
-      (fields
-        (field (name "Reference") "L")
-        (field (name "Value") "L_Small")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "Inductor, small symbol"))
-      (pins
-        (pin (num "1") (name "") (type "passive"))
-        (pin (num "2") (name "") (type "passive"))))
-    (libpart (lib "Device") (part "R_Shunt")
-      (description "Shunt resistor")
-      (docs "~")
-      (footprints
-        (fp "R_*Shunt*"))
-      (fields
-        (field (name "Reference") "R")
-        (field (name "Value") "R_Shunt")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "Shunt resistor"))
-      (pins
-        (pin (num "1") (name "1") (type "passive"))
-        (pin (num "2") (name "2") (type "passive"))
-        (pin (num "3") (name "3") (type "passive"))
-        (pin (num "4") (name "4") (type "passive"))))
-    (libpart (lib "Device") (part "R_Small_US")
-      (description "Resistor, small US symbol")
-      (docs "~")
-      (footprints
-        (fp "R_*"))
-      (fields
-        (field (name "Reference") "R")
-        (field (name "Value") "R_Small_US")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "Resistor, small US symbol"))
-      (pins
-        (pin (num "1") (name "") (type "passive"))
-        (pin (num "2") (name "") (type "passive"))))
-    (libpart (lib "Jumper") (part "SolderJumper_2_Open")
-      (description "Solder Jumper, 2-pole, open")
-      (docs "~")
-      (footprints
-        (fp "SolderJumper*Open*"))
-      (fields
-        (field (name "Reference") "JP")
-        (field (name "Value") "SolderJumper_2_Open")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "Solder Jumper, 2-pole, open"))
-      (pins
-        (pin (num "1") (name "A") (type "passive"))
-        (pin (num "2") (name "B") (type "passive"))))
-    (libpart (lib "pa40") (part "EPC2036")
-      (description "N-MOSFET transistor")
-      (docs "~")
-      (fields
-        (field (name "Reference") "Q")
-        (field (name "Value") "Q_NMOS")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "N-MOSFET transistor"))
-      (pins
-        (pin (num "1") (name "G") (type "input"))
-        (pin (num "2") (name "S") (type "passive"))
-        (pin (num "3") (name "D") (type "passive"))
-        (pin (num "4") (name "S") (type "passive"))))
-    (libpart (lib "pa40") (part "Q_NPN_BEC")
-      (description "NPN bipolar junction transistor")
-      (docs "~")
-      (fields
-        (field (name "Reference") "Q")
-        (field (name "Value") "Q_NPN")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "NPN bipolar junction transistor"))
-      (pins
-        (pin (num "1") (name "B") (type "input"))
-        (pin (num "2") (name "E") (type "passive"))
-        (pin (num "3") (name "C") (type "passive"))))
-    (libpart (lib "pa40") (part "Q_PMOS_GSD")
-      (description "P-MOSFET transistor")
-      (docs "~")
-      (fields
-        (field (name "Reference") "Q")
-        (field (name "Value") "Q_PMOS")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "P-MOSFET transistor"))
-      (pins
-        (pin (num "1") (name "G") (type "input"))
-        (pin (num "2") (name "S") (type "passive"))
-        (pin (num "3") (name "D") (type "passive"))))
-    (libpart (lib "pa40") (part "TPS62175")
-      (description "TI TPS62175 28 V 0.5 A step-down converter, adjustable, WSON-10 (pinout SLVSB35C)")
-      (docs "https://www.ti.com/lit/ds/symlink/tps62175.pdf")
-      (fields
-        (field (name "Reference") "U")
-        (field (name "Value") "TPS62175")
-        (field (name "Footprint") "Package_SON:WSON-10-1EP_2x3mm_P0.5mm_EP0.84x2.4mm")
-        (field (name "Datasheet") "https://www.ti.com/lit/ds/symlink/tps62175.pdf")
-        (field (name "Description") "TI TPS62175 28 V 0.5 A step-down converter, adjustable, WSON-10 (pinout SLVSB35C)"))
-      (pins
-        (pin (num "1") (name "PGND") (type "power_in"))
-        (pin (num "2") (name "VIN") (type "power_in"))
-        (pin (num "3") (name "EN") (type "input"))
-        (pin (num "4") (name "NC") (type "passive"))
-        (pin (num "5") (name "FB") (type "input"))
-        (pin (num "6") (name "AGND") (type "power_in"))
-        (pin (num "7") (name "PG") (type "open_collector"))
-        (pin (num "8") (name "SLEEP") (type "input"))
-        (pin (num "9") (name "SW") (type "power_out"))
-        (pin (num "10") (name "VOS") (type "input"))
-        (pin (num "11") (name "EP") (type "passive")))))
-  (libraries
-    (library (logical "74xGxx")
-      (uri "/usr/share/kicad/symbols//74xGxx.kicad_sym"))
-    (library (logical "Connector")
-      (uri "/usr/share/kicad/symbols//Connector.kicad_sym"))
-    (library (logical "Connector_Audio")
-      (uri "/usr/share/kicad/symbols//Connector_Audio.kicad_sym"))
-    (library (logical "Device")
-      (uri "/usr/share/kicad/symbols//Device.kicad_sym"))
-    (library (logical "Jumper")
-      (uri "/usr/share/kicad/symbols//Jumper.kicad_sym"))
-    (library (logical "pa40")
-      (uri "/workspace/40mEffficientTransmitter/PCB/pa40.kicad_sym")))
-  (nets
-    (net (code "1") (name "+5V") (class "Default")
-      (node (ref "C13") (pin "1") (pintype "passive"))
-      (node (ref "C23") (pin "1") (pintype "passive"))
-      (node (ref "FB3") (pin "2") (pintype "passive"))
-      (node (ref "R10") (pin "1") (pintype "passive"))
-      (node (ref "R5") (pin "1") (pintype "passive"))
-      (node (ref "R8") (pin "1") (pintype "passive"))
-      (node (ref "TP12") (pin "1") (pinfunction "1") (pintype "passive"))
-      (node (ref "U1") (pin "5") (pinfunction "VCC") (pintype "power_in")))
-    (net (code "2") (name "+12V") (class "Default")
-      (node (ref "C10") (pin "1") (pintype "passive"))
-      (node (ref "C11") (pin "1") (pintype "passive"))
-      (node (ref "C12") (pin "1") (pintype "passive"))
-      (node (ref "FB2") (pin "1") (pintype "passive"))
-      (node (ref "JP1") (pin "2") (pinfunction "B") (pintype "passive"))
-      (node (ref "Q2") (pin "2") (pinfunction "S") (pintype "passive"))
-      (node (ref "R12") (pin "4") (pinfunction "4") (pintype "passive"))
-      (node (ref "R2") (pin "1") (pintype "passive")))
-    (net (code "3") (name "/+12V_PA") (class "Default")
-      (node (ref "C14") (pin "1") (pintype "passive"))
-      (node (ref "C15") (pin "1") (pintype "passive"))
-      (node (ref "C4") (pin "1") (pintype "passive"))
-      (node (ref "L1") (pin "1") (pintype "passive"))
-      (node (ref "Q2") (pin "3") (pinfunction "D") (pintype "passive"))
-      (node (ref "TP14") (pin "1") (pinfunction "1") (pintype "passive")))
-    (net (code "4") (name "/drain") (class "Default")
-      (node (ref "C1") (pin "1") (pintype "passive"))
-      (node (ref "C2") (pin "1") (pintype "passive"))
-      (node (ref "L1") (pin "2") (pintype "passive"))
-      (node (ref "Q1") (pin "3") (pinfunction "D") (pintype "passive"))
-      (node (ref "TP6") (pin "1") (pinfunction "1") (pintype "passive")))
-    (net (code "5") (name "/gate") (class "Default")
-      (node (ref "D1") (pin "1") (pinfunction "K") (pintype "passive"))
-      (node (ref "Q1") (pin "1") (pinfunction "G") (pintype "input"))
-      (node (ref "R1") (pin "2") (pintype "passive"))
-      (node (ref "TP4") (pin "1") (pinfunction "1") (pintype "passive")))
-    (net (code "6") (name "/out_50r") (class "Default")
-      (node (ref "C16") (pin "1") (pintype "passive"))
-      (node (ref "C17") (pin "1") (pintype "passive"))
-      (node (ref "C18") (pin "1") (pintype "passive"))
-      (node (ref "C3") (pin "1") (pintype "passive"))
-      (node (ref "L2") (pin "2") (pintype "passive"))
-      (node (ref "L3") (pin "1") (pintype "passive"))
-      (node (ref "TP10") (pin "1") (pinfunction "1") (pintype "passive")))
-    (net (code "7") (name "/rf_out") (class "Default")
-      (node (ref "C17") (pin "2") (pintype "passive"))
-      (node (ref "C18") (pin "2") (pintype "passive"))
-      (node (ref "C19") (pin "1") (pintype "passive"))
-      (node (ref "J2") (pin "1") (pinfunction "In") (pintype "passive"))
-      (node (ref "L3") (pin "2") (pintype "passive")))
-    (net (code "8") (name "/xo") (class "Default")
-      (node (ref "C8") (pin "2") (pintype "passive"))
-      (node (ref "R10") (pin "2") (pintype "passive"))
-      (node (ref "R11") (pin "1") (pintype "passive"))
-      (node (ref "TP8") (pin "1") (pinfunction "1") (pintype "passive"))
-      (node (ref "U1") (pin "2") (pintype "input")))
-    (net (code "9") (name "GND") (class "Default")
-      (node (ref "C1") (pin "2") (pintype "passive"))
-      (node (ref "C10") (pin "2") (pintype "passive"))
-      (node (ref "C11") (pin "2") (pintype "passive"))
-      (node (ref "C12") (pin "2") (pintype "passive"))
-      (node (ref "C13") (pin "2") (pintype "passive"))
-      (node (ref "C14") (pin "2") (pintype "passive"))
-      (node (ref "C15") (pin "2") (pintype "passive"))
-      (node (ref "C16") (pin "2") (pintype "passive"))
-      (node (ref "C19") (pin "2") (pintype "passive"))
-      (node (ref "C21") (pin "2") (pintype "passive"))
-      (node (ref "C22") (pin "2") (pintype "passive"))
-      (node (ref "C23") (pin "2") (pintype "passive"))
-      (node (ref "C3") (pin "2") (pintype "passive"))
-      (node (ref "C5") (pin "2") (pintype "passive"))
-      (node (ref "C6") (pin "2") (pintype "passive"))
-      (node (ref "C7") (pin "2") (pintype "passive"))
-      (node (ref "D1") (pin "2") (pinfunction "A") (pintype "passive"))
-      (node (ref "J1") (pin "2") (pintype "passive"))
-      (node (ref "J2") (pin "2") (pinfunction "Ext") (pintype "passive"))
-      (node (ref "J4") (pin "S") (pintype "passive"))
-      (node (ref "Q1") (pin "2") (pinfunction "S") (pintype "passive"))
-      (node (ref "Q1") (pin "4") (pinfunction "S") (pintype "passive"))
-      (node (ref "R11") (pin "2") (pintype "passive"))
-      (node (ref "R14") (pin "2") (pintype "passive"))
-      (node (ref "R6") (pin "2") (pintype "passive"))
-      (node (ref "R7") (pin "2") (pintype "passive"))
-      (node (ref "TP11") (pin "1") (pinfunction "1") (pintype "passive"))
-      (node (ref "TP13") (pin "1") (pinfunction "1") (pintype "passive"))
-      (node (ref "TP3") (pin "1") (pinfunction "1") (pintype "passive"))
-      (node (ref "TP5") (pin "1") (pinfunction "1") (pintype "passive"))
-      (node (ref "TP7") (pin "1") (pinfunction "1") (pintype "passive"))
-      (node (ref "TP9") (pin "1") (pinfunction "1") (pintype "passive"))
-      (node (ref "U1") (pin "3") (pinfunction "GND") (pintype "power_in"))
-      (node (ref "U2") (pin "1") (pinfunction "PGND") (pintype "power_in"))
-      (node (ref "U2") (pin "11") (pinfunction "EP") (pintype "passive"))
-      (node (ref "U2") (pin "4") (pinfunction "NC") (pintype "passive"))
-      (node (ref "U2") (pin "6") (pinfunction "AGND") (pintype "power_in")))
-    (net (code "10") (name "Net-(C2-Pad2)") (class "Default")
-      (node (ref "C2") (pin "2") (pintype "passive"))
-      (node (ref "L2") (pin "1") (pintype "passive")))
-    (net (code "11") (name "Net-(C6-Pad1)") (class "Default")
-      (node (ref "C6") (pin "1") (pintype "passive"))
-      (node (ref "R9") (pin "1") (pintype "passive"))
-      (node (ref "Y1") (pin "2") (pinfunction "2") (pintype "passive")))
-    (net (code "12") (name "Net-(C20-Pad2)") (class "Default")
-      (node (ref "C20") (pin "2") (pintype "passive"))
-      (node (ref "C9") (pin "2") (pintype "passive"))
-      (node (ref "Y1") (pin "1") (pinfunction "1") (pintype "passive")))
-    (net (code "13") (name "Net-(J4-PadT)") (class "Default")
-      (node (ref "J4") (pin "T") (pintype "passive"))
-      (node (ref "R3") (pin "2") (pintype "passive")))
-    (net (code "14") (name "Net-(JP1-A)") (class "Default")
-      (node (ref "J1") (pin "1") (pintype "passive"))
-      (node (ref "JP1") (pin "1") (pinfunction "A") (pintype "passive"))
-      (node (ref "R12") (pin "1") (pinfunction "1") (pintype "passive")))
-    (net (code "15") (name "Net-(Q2-G)") (class "Default")
-      (node (ref "C4") (pin "2") (pintype "passive"))
-      (node (ref "Q2") (pin "1") (pinfunction "G") (pintype "input"))
-      (node (ref "R2") (pin "2") (pintype "passive"))
-      (node (ref "R3") (pin "1") (pintype "passive"))
-      (node (ref "TP15") (pin "1") (pinfunction "1") (pintype "passive")))
-    (net (code "16") (name "Net-(Q4-B)") (class "Default")
-      (node (ref "C20") (pin "1") (pintype "passive"))
-      (node (ref "C5") (pin "1") (pintype "passive"))
-      (node (ref "C9") (pin "1") (pintype "passive"))
-      (node (ref "Q4") (pin "1") (pinfunction "B") (pintype "input"))
-      (node (ref "R5") (pin "2") (pintype "passive"))
-      (node (ref "R6") (pin "1") (pintype "passive")))
-    (net (code "17") (name "Net-(Q4-C)") (class "Default")
-      (node (ref "C8") (pin "1") (pintype "passive"))
-      (node (ref "Q4") (pin "3") (pinfunction "C") (pintype "passive"))
-      (node (ref "R8") (pin "2") (pintype "passive"))
-      (node (ref "R9") (pin "2") (pintype "passive")))
-    (net (code "18") (name "Net-(Q4-E)") (class "Default")
-      (node (ref "C7") (pin "1") (pintype "passive"))
-      (node (ref "Q4") (pin "2") (pinfunction "E") (pintype "passive"))
-      (node (ref "R7") (pin "1") (pintype "passive")))
-    (net (code "19") (name "Net-(R1-Pad1)") (class "Default")
-      (node (ref "R1") (pin "1") (pintype "passive"))
-      (node (ref "U1") (pin "4") (pintype "output")))
-    (net (code "20") (name "Net-(R12-Pad2)") (class "Default")
-      (node (ref "R12") (pin "2") (pinfunction "2") (pintype "passive"))
-      (node (ref "TP1") (pin "1") (pinfunction "1") (pintype "passive")))
-    (net (code "21") (name "Net-(R12-Pad3)") (class "Default")
-      (node (ref "R12") (pin "3") (pinfunction "3") (pintype "passive"))
-      (node (ref "TP2") (pin "1") (pinfunction "1") (pintype "passive")))
-    (net (code "22") (name "Net-(U2-EN)") (class "Default")
-      (node (ref "C21") (pin "1") (pintype "passive"))
-      (node (ref "FB2") (pin "2") (pintype "passive"))
-      (node (ref "U2") (pin "2") (pinfunction "VIN") (pintype "power_in"))
-      (node (ref "U2") (pin "3") (pinfunction "EN") (pintype "input")))
-    (net (code "23") (name "Net-(U2-FB)") (class "Default")
-      (node (ref "R13") (pin "2") (pintype "passive"))
-      (node (ref "R14") (pin "1") (pintype "passive"))
-      (node (ref "U2") (pin "5") (pinfunction "FB") (pintype "input")))
-    (net (code "24") (name "Net-(U2-SLEEP)") (class "Default")
-      (node (ref "C22") (pin "1") (pintype "passive"))
-      (node (ref "FB3") (pin "1") (pintype "passive"))
-      (node (ref "L4") (pin "2") (pintype "passive"))
-      (node (ref "R13") (pin "1") (pintype "passive"))
-      (node (ref "U2") (pin "10") (pinfunction "VOS") (pintype "input"))
-      (node (ref "U2") (pin "8") (pinfunction "SLEEP") (pintype "input")))
-    (net (code "25") (name "Net-(U2-SW)") (class "Default")
-      (node (ref "L4") (pin "1") (pintype "passive"))
-      (node (ref "U2") (pin "9") (pinfunction "SW") (pintype "power_out")))
-    (net (code "26") (name "unconnected-(J1-Pad3)") (class "Default")
-      (node (ref "J1") (pin "3") (pintype "passive+no_connect")))
-    (net (code "27") (name "unconnected-(J4-PadR)") (class "Default")
-      (node (ref "J4") (pin "R") (pintype "passive+no_connect")))
-    (net (code "28") (name "unconnected-(U1-NC-Pad1)") (class "Default")
-      (node (ref "U1") (pin "1") (pinfunction "NC") (pintype "no_connect")))
-    (net (code "29") (name "unconnected-(U2-PG-Pad7)") (class "Default")
-      (node (ref "U2") (pin "7") (pinfunction "PG") (pintype "open_collector+no_connect")))))
+(export
+	(version "E")
+	(design
+		(source "/workspace/40mEffficientTransmitter/PCB/pa40-classe.kicad_sch")
+		(date "2026-11-19T12:00:51")
+		(tool "Eeschema 10.0.8")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title "40 m 5 W GaN class E CW TX: XO, PMOS keying, LPF")
+				(company "Etherkit / NT7S")
+				(rev "7")
+				(date "2026-11-18")
+				(source "pa40-classe.kicad_sch")
+				(comment
+					(number "1")
+					(value "Source: Efficient 5 W 40 m PA: options, worked example")
+				)
+				(comment
+					(number "2")
+					(value "Rev 7: DC jack J1, 3.5 mm key jack J4, J2 Molex 0731000105 BNC. Rev 6 (was F): TP4-TP15, DNP D1")
+				)
+				(comment
+					(number "3")
+					(value "Rev 5 (was E): SMT, TPS62175 buck. Prototype revs 1-6 were A-F")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C1")
+			(value "285p C0G")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "KEMET C1206C271J1GACTU + C1206C150J1GACTU")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "KEMET C1206C271J1GACTU + C1206C150J1GACTU")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4d6a5625-8644-4edb-9d2e-1a42e6ecc9b2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C2")
+			(value "424.5p C0G")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "KEMET C1206C391J2GACTU + C1206C330J2GACTU")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "KEMET C1206C391J2GACTU + C1206C330J2GACTU")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "df04e52c-6609-48a4-b02d-365684eab74f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C3")
+			(value "731p C0G")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "KEMET C1206C681J1GACTU + C1206C510J1GACTU")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "KEMET C1206C681J1GACTU + C1206C510J1GACTU")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ce7d1cc9-4171-4cf1-9897-bd927a096f22")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C4")
+			(value "47n X7R")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Samsung CL10B473KB8NNNC")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Samsung CL10B473KB8NNNC")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ddcc5aa4-2335-40c4-a52a-5b4881108481")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C5")
+			(value "33p C0G")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Murata GRM1885C1H330JA01D")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Murata GRM1885C1H330JA01D")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "293129c1-6e44-423c-a1e2-e807d3e21040")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C6")
+			(value "33p C0G")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Murata GRM1885C1H330JA01D")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Murata GRM1885C1H330JA01D")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c327ba84-21da-44b7-baef-2c1a86c7e1df")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C7")
+			(value "100n X7R")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Yageo CC0603KRX7R9BB104")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Yageo CC0603KRX7R9BB104")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "95e7d9e1-2e19-4d49-ba48-cab74e703c79")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C8")
+			(value "1n C0G")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Murata GRM1885C1H102JA01D")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Murata GRM1885C1H102JA01D")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f7bad024-92b4-48e6-a8e4-47d00d3e86b7")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C9")
+			(value "5.5-30p")
+			(footprint "pa40:C_Trimmer_Voltronics_JZ")
+			(fields
+				(field
+					(name "MPN") "Knowles Voltronics JZ300")
+				(field
+					(name "Footprint") "pa40:C_Trimmer_Voltronics_JZ")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Trim_Small")
+				(description "Trimmable capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Knowles Voltronics JZ300")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "trimmer variable capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d5d72c55-7bef-47bd-9bb7-c80f1777eada")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C10")
+			(value "100u")
+			(footprint "Capacitor_SMD:CP_Elec_6.3x7.7")
+			(fields
+				(field
+					(name "MPN") "Panasonic EEE-FK1E101P")
+				(field
+					(name "Footprint") "Capacitor_SMD:CP_Elec_6.3x7.7")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Panasonic EEE-FK1E101P")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "287ca124-5a67-4079-8228-a21d60435b4a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C11")
+			(value "1u X7R")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "Yageo CC0805KKX7R8BB105")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Yageo CC0805KKX7R8BB105")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "86ca371e-eba0-44b0-b1ea-aa1e5b69723c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12")
+			(value "10n C0G")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Yageo CC0603JRNPO9BN103")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Yageo CC0603JRNPO9BN103")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1e185db7-1fba-4ffe-99a7-3e21cff0c1d0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C13")
+			(value "0.1u X7R")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Yageo CC0603KRX7R9BB104")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Yageo CC0603KRX7R9BB104")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4acaa2c2-db53-4d8d-8f22-fab48f0ffdfb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C14")
+			(value "0.1u X7R")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "Samsung CL21B104KBCNNNC")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Samsung CL21B104KBCNNNC")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c1fb0d19-1d17-414e-9ceb-1100bea4bac5")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C15")
+			(value "10n C0G")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Yageo CC0603JRNPO9BN103")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Yageo CC0603JRNPO9BN103")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6c86639b-736d-4b80-8a29-bbe0aed03237")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C16")
+			(value "270p C0G")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "KEMET C1206C271J1GACTU")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "KEMET C1206C271J1GACTU")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "02c5ac2d-5f38-467d-8239-9f99127015c7")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C17")
+			(value "150p C0G")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "KEMET C1206C151J1GACTU")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "KEMET C1206C151J1GACTU")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7962b6c0-e025-431f-a3d9-d47b1c4d39d0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C18")
+			(value "18p C0G")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "KEMET C1206C180J1GACTU")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "KEMET C1206C180J1GACTU")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "89d78354-124a-4744-ac2e-a6de95c7e73d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C19")
+			(value "270p C0G")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "KEMET C1206C271J1GACTU")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "KEMET C1206C271J1GACTU")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "63b5b3bb-8401-448e-bdcc-a54d3c297b3b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C20")
+			(value "10p C0G")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Murata GRM1885C1H100JA01D")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Murata GRM1885C1H100JA01D")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "51deb2dd-38d9-4887-b718-0e30dc9eb272")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C21")
+			(value "2.2u 50V X5R")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "Yageo CC0805KKX5R9BB225")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Yageo CC0805KKX5R9BB225")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "57beedab-c10f-49ad-bdf9-5ae265060dd5")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C22")
+			(value "22u 10V X5R")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "Samsung CL21A226MOQNNNE")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Samsung CL21A226MOQNNNE")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "3edb8747-5993-47d9-b8b1-fb30c6bd2a50")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C23")
+			(value "10u 10V X5R")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "MPN") "Yageo CC0805KRX5R6BB106")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Yageo CC0805KRX5R6BB106")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ee99c0fc-8d4e-4af1-bc82-90d50aab648a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D1")
+			(value "DNP clamp")
+			(footprint "pa40:D_SOT-23_A1_K3")
+			(fields
+				(field
+					(name "MPN") "DNP: SOT-23 A1/K3 footprint, see note 15")
+				(field
+					(name "Footprint") "pa40:D_SOT-23_A1_K3")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "D_Zener_Small")
+				(description "Zener diode, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "DNP: SOT-23 A1/K3 footprint, see note 15")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "dnp")
+			)
+			(property
+				(name "ki_keywords")
+				(value "diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "TO-???* *_Diode_* *SingleDiode* D_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4a007707-8f5d-4aba-9953-4a666cc9d464")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FB2")
+			(value "BLM18PG221")
+			(footprint "Inductor_SMD:L_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Murata BLM18PG221SN1D")
+				(field
+					(name "Footprint") "Inductor_SMD:L_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "FerriteBead_Small")
+				(description "Ferrite bead, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Murata BLM18PG221SN1D")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "L ferrite bead inductor filter")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Inductor_* L_* *Ferrite*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "dadf58f6-ff99-419d-b153-695fc1e2099d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "FB3")
+			(value "BLM18PG221")
+			(footprint "Inductor_SMD:L_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Murata BLM18PG221SN1D")
+				(field
+					(name "Footprint") "Inductor_SMD:L_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "FerriteBead_Small")
+				(description "Ferrite bead, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Murata BLM18PG221SN1D")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "L ferrite bead inductor filter")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Inductor_* L_* *Ferrite*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9975a4b2-9652-42cc-a971-356b67555908")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "H1")
+			(value "MountingHole_Pad")
+			(footprint "MountingHole:MountingHole_3.2mm_M3_Pad_Via")
+			(fields
+				(field
+					(name "MPN")
+				)
+				(field
+					(name "Footprint") "MountingHole:MountingHole_3.2mm_M3_Pad_Via")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Mechanical")
+				(part "MountingHole_Pad")
+				(description "Mounting Hole with connection")
+			)
+			(property
+				(name "MPN")
+				(value "")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "mounting hole")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "MountingHole*Pad*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "fd776354-9abb-4907-8769-ace0834de854")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "H2")
+			(value "MountingHole_Pad")
+			(footprint "MountingHole:MountingHole_3.2mm_M3_Pad_Via")
+			(fields
+				(field
+					(name "MPN")
+				)
+				(field
+					(name "Footprint") "MountingHole:MountingHole_3.2mm_M3_Pad_Via")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Mechanical")
+				(part "MountingHole_Pad")
+				(description "Mounting Hole with connection")
+			)
+			(property
+				(name "MPN")
+				(value "")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "mounting hole")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "MountingHole*Pad*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4fc63596-9ab4-4a44-85b9-ed868ee7d052")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "H3")
+			(value "MountingHole_Pad")
+			(footprint "MountingHole:MountingHole_3.2mm_M3_Pad_Via")
+			(fields
+				(field
+					(name "MPN")
+				)
+				(field
+					(name "Footprint") "MountingHole:MountingHole_3.2mm_M3_Pad_Via")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Mechanical")
+				(part "MountingHole_Pad")
+				(description "Mounting Hole with connection")
+			)
+			(property
+				(name "MPN")
+				(value "")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "mounting hole")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "MountingHole*Pad*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "96171e2e-93b9-4e0e-93ef-a4e27ba6335c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "H4")
+			(value "MountingHole_Pad")
+			(footprint "MountingHole:MountingHole_3.2mm_M3_Pad_Via")
+			(fields
+				(field
+					(name "MPN")
+				)
+				(field
+					(name "Footprint") "MountingHole:MountingHole_3.2mm_M3_Pad_Via")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Mechanical")
+				(part "MountingHole_Pad")
+				(description "Mounting Hole with connection")
+			)
+			(property
+				(name "MPN")
+				(value "")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "mounting hole")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "MountingHole*Pad*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "438517ac-1003-4788-ab9d-185bbcb2c243")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J1")
+			(value "12.0 V in, center +")
+			(footprint "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal")
+			(fields
+				(field
+					(name "MPN") "Same Sky PJ-102AH")
+				(field
+					(name "Footprint") "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "Barrel_Jack_Switch")
+				(description "DC Barrel Jack with an internal switch")
+			)
+			(property
+				(name "MPN")
+				(value "Same Sky PJ-102AH")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "DC power barrel jack connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "BarrelJack*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ef642cd3-e271-4a16-bad5-54c4d81f48e9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J2")
+			(value "RF out, 50 Ω")
+			(footprint "pa40:BNC_Molex_73100-0105_Horizontal")
+			(fields
+				(field
+					(name "MPN") "Molex 0731000105")
+				(field
+					(name "Footprint") "pa40:BNC_Molex_73100-0105_Horizontal")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "Conn_Coaxial")
+				(description "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)")
+			)
+			(property
+				(name "MPN")
+				(value "Molex 0731000105")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "BNC SMA SMB SMC LEMO coaxial connector CINCH RCA MCX MMCX U.FL UMRF")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "*BNC* *SMA* *SMB* *SMC* *Cinch* *LEMO* *UMRF* *MCX* *U.FL*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f395fba6-3c33-4c73-9903-b188ddbf4ece")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J4")
+			(value "KEY 3.5 mm")
+			(footprint "pa40:Jack_3.5mm_CUI_SJ1-3523N_Horizontal_DS")
+			(fields
+				(field
+					(name "MPN") "Same Sky SJ1-3523N")
+				(field
+					(name "Footprint") "pa40:Jack_3.5mm_CUI_SJ1-3523N_Horizontal_DS")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector_Audio")
+				(part "AudioJack3")
+				(description "Audio Jack, 3 Poles (Stereo / TRS)")
+			)
+			(property
+				(name "MPN")
+				(value "Same Sky SJ1-3523N")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "audio jack receptacle stereo headphones phones TRS connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Jack*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1a4efdd5-6385-4514-8e6d-4c84de46f5c2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "S")
+						)
+						(pin
+							(num "R")
+						)
+						(pin
+							(num "T")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP1")
+			(value "DNP shunt: close JP1")
+			(footprint "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm")
+			(fields
+				(field
+					(name "MPN")
+				)
+				(field
+					(name "Footprint") "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Jumper")
+				(part "SolderJumper_2_Open")
+				(description "Solder Jumper, 2-pole, open")
+			)
+			(property
+				(name "MPN")
+				(value "")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "solder jumper SPST")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SolderJumper*Open*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0ff092ba-a6c5-45b4-91ca-df85f5d15704")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "L1")
+			(value "47u FT50-61 26t #24")
+			(footprint "pa40:L_Toroid_FT50_Flat_P7.62mm_Drill1.0mm")
+			(fields
+				(field
+					(name "MPN") "Fair-Rite 5961000301 (FT-50-61)")
+				(field
+					(name "Footprint") "pa40:L_Toroid_FT50_Flat_P7.62mm_Drill1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "L_Small")
+				(description "Inductor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Fair-Rite 5961000301 (FT-50-61)")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "inductor choke coil reactor magnetic")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Choke_* *Coil* Inductor_* L_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b6be22eb-2cae-4231-95e8-70eec740ff12")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "L2")
+			(value "2.18u T80-6 22t #16")
+			(footprint "pa40:L_Toroid_T80_Flat_P10.16mm_Drill1.6mm")
+			(fields
+				(field
+					(name "MPN") "Micrometals T80-6")
+				(field
+					(name "Footprint") "pa40:L_Toroid_T80_Flat_P10.16mm_Drill1.6mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "L_Small")
+				(description "Inductor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Micrometals T80-6")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "inductor choke coil reactor magnetic")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Choke_* *Coil* Inductor_* L_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d76b69fb-6424-4d3c-b296-5603f279625a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "L3")
+			(value "0.76u T80-6 13t")
+			(footprint "pa40:L_Toroid_T80_Flat_P10.16mm_Drill1.6mm")
+			(fields
+				(field
+					(name "MPN") "Micrometals T80-6")
+				(field
+					(name "Footprint") "pa40:L_Toroid_T80_Flat_P10.16mm_Drill1.6mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "L_Small")
+				(description "Inductor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Micrometals T80-6")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "inductor choke coil reactor magnetic")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Choke_* *Coil* Inductor_* L_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6d7f42b4-a61e-427b-bfe1-672411255840")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "L4")
+			(value "10u")
+			(footprint "Inductor_SMD:L_Coilcraft_LPS4018")
+			(fields
+				(field
+					(name "MPN") "Wurth 74404042100")
+				(field
+					(name "Footprint") "Inductor_SMD:L_Coilcraft_LPS4018")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "L_Small")
+				(description "Inductor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Wurth 74404042100")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "inductor choke coil reactor magnetic")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Choke_* *Coil* Inductor_* L_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6dcd0523-5cd2-4dbb-b8ec-4c7d6ec1df56")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "Q1")
+			(value "EPC2036")
+			(footprint "pa40:EPC2036_LGA4_SMD_P0.45mm")
+			(fields
+				(field
+					(name "MPN") "EPC EPC2036")
+				(field
+					(name "Footprint") "pa40:EPC2036_LGA4_SMD_P0.45mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "pa40")
+				(part "EPC2036")
+				(description "N-MOSFET transistor")
+			)
+			(property
+				(name "MPN")
+				(value "EPC EPC2036")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "NMOS N-MOS")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "14b92e05-49ab-4412-876d-7b48f35ebc11")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "Q2")
+			(value "AO3407A")
+			(footprint "Package_TO_SOT_SMD:SOT-23")
+			(fields
+				(field
+					(name "MPN") "AOS AO3407A")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "pa40")
+				(part "Q_PMOS_GSD")
+				(description "P-MOSFET transistor")
+			)
+			(property
+				(name "MPN")
+				(value "AOS AO3407A")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "PMOS P-MOS")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "21100e4e-5aaa-4daf-a6ec-16d5c67e649a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "Q4")
+			(value "MMBT3904")
+			(footprint "Package_TO_SOT_SMD:SOT-23")
+			(fields
+				(field
+					(name "MPN") "onsemi MMBT3904LT1G")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "pa40")
+				(part "Q_NPN_BEC")
+				(description "NPN bipolar junction transistor")
+			)
+			(property
+				(name "MPN")
+				(value "onsemi MMBT3904LT1G")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "BJT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "326265dc-38d6-4166-ab33-499917f93377")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R1")
+			(value "0R")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Yageo RC0603JR-070RL")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Yageo RC0603JR-070RL")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d34c6de7-2652-4d47-87e5-3296213f2984")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R2")
+			(value "22k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Stackpole RMCF0603FT22K0")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Stackpole RMCF0603FT22K0")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2e5c73de-43d1-434e-905f-f105b72f631c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R3")
+			(value "22k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Stackpole RMCF0603FT22K0")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Stackpole RMCF0603FT22K0")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "97346494-e33d-4a3d-861c-f5b9c172a332")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R5")
+			(value "47k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Yageo RC0603FR-0747KL")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Yageo RC0603FR-0747KL")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "fdc11fc1-1b1c-499a-941e-5f8d7b052dad")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R6")
+			(value "22k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Stackpole RMCF0603FT22K0")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Stackpole RMCF0603FT22K0")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d38f705c-3f3b-4670-a13a-7be5c36dc7e3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R7")
+			(value "1.5k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Yageo RC0603FR-071K5L")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Yageo RC0603FR-071K5L")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e1c1a239-299d-4d50-aa55-8e1b9e15f4fb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R8")
+			(value "3.3k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Yageo RC0603FR-073K3L")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Yageo RC0603FR-073K3L")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "def5a8fa-9d53-4d94-955c-08b3ebba2e2b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R9")
+			(value "1k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Yageo RC0603FR-071KL")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Yageo RC0603FR-071KL")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "bc685e39-9e45-465a-902c-70d921020531")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R10")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Stackpole RMCF0603FT100K")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Stackpole RMCF0603FT100K")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a098af07-c9af-4abf-a99f-7d8875d30071")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R11")
+			(value "91k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Yageo RC0603FR-0791KL")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Yageo RC0603FR-0791KL")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4234272b-c89a-4b75-8ab0-8a49293ba0df")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R12")
+			(value "10m 1%")
+			(footprint "Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T1.19mm")
+			(fields
+				(field
+					(name "MPN") "Vishay WSK2512R0100FEA")
+				(field
+					(name "Footprint") "Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T1.19mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Shunt")
+				(description "Shunt resistor")
+			)
+			(property
+				(name "MPN")
+				(value "Vishay WSK2512R0100FEA")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res shunt resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*Shunt*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0b0f4643-3ee4-4520-a7ba-a6a68028d467")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R13")
+			(value "523k 1%")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Yageo RC0603FR-07523KL")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Yageo RC0603FR-07523KL")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "bb764453-5fe2-434d-9d12-1284462a0d0b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R14")
+			(value "100k 1%")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "Stackpole RMCF0603FT100K")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "Stackpole RMCF0603FT100K")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6173cddc-ddc5-4503-9395-072d6624d654")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP1")
+			(value "I+")
+			(footprint "TestPoint:TestPoint_Keystone_5019_Miniature")
+			(fields
+				(field
+					(name "MPN") "Keystone 5019")
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Keystone_5019_Miniature")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "MPN")
+				(value "Keystone 5019")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "47d3e258-8b10-4c77-a63a-c88722f61120")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP2")
+			(value "I-")
+			(footprint "TestPoint:TestPoint_Keystone_5019_Miniature")
+			(fields
+				(field
+					(name "MPN") "Keystone 5019")
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Keystone_5019_Miniature")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "MPN")
+				(value "Keystone 5019")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "63721c1d-db38-4358-97ea-b0f2e76b607e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP3")
+			(value "GND")
+			(footprint "TestPoint:TestPoint_Keystone_5019_Miniature")
+			(fields
+				(field
+					(name "MPN") "Keystone 5019")
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Keystone_5019_Miniature")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "MPN")
+				(value "Keystone 5019")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "02aca581-3854-4c7e-bbc3-3ed85dd39f3a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP4")
+			(value "gate")
+			(footprint "TestPoint:TestPoint_Pad_D1.0mm")
+			(fields
+				(field
+					(name "MPN") "bare pad, no part")
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "MPN")
+				(value "bare pad, no part")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a946a2b5-7312-4d3c-bc55-b5158359f5c1")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP5")
+			(value "GND")
+			(footprint "TestPoint:TestPoint_Pad_D1.5mm")
+			(fields
+				(field
+					(name "MPN") "bare pad, no part")
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "MPN")
+				(value "bare pad, no part")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a4c4ac83-b8f9-4a92-b8eb-a66d6873ce3e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP6")
+			(value "drain")
+			(footprint "TestPoint:TestPoint_Pad_D1.0mm")
+			(fields
+				(field
+					(name "MPN") "bare pad, no part")
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "MPN")
+				(value "bare pad, no part")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "45179124-2350-4467-8fee-fc5973f88c64")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP7")
+			(value "GND")
+			(footprint "TestPoint:TestPoint_Pad_D1.5mm")
+			(fields
+				(field
+					(name "MPN") "bare pad, no part")
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "MPN")
+				(value "bare pad, no part")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "81431f92-becb-432c-8b61-89b824648fdb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP8")
+			(value "xo")
+			(footprint "TestPoint:TestPoint_Pad_D1.0mm")
+			(fields
+				(field
+					(name "MPN") "bare pad, no part")
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "MPN")
+				(value "bare pad, no part")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7bd650a9-a466-44dd-b36e-3b12594fa349")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP9")
+			(value "GND")
+			(footprint "TestPoint:TestPoint_Pad_D1.5mm")
+			(fields
+				(field
+					(name "MPN") "bare pad, no part")
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "MPN")
+				(value "bare pad, no part")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2bed3d34-1dc5-473b-808e-95c4e3908b32")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP10")
+			(value "out_50r")
+			(footprint "TestPoint:TestPoint_Pad_D1.0mm")
+			(fields
+				(field
+					(name "MPN") "bare pad, no part")
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "MPN")
+				(value "bare pad, no part")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "574773c1-77f3-417e-bc01-53d358d5bf28")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP11")
+			(value "GND")
+			(footprint "TestPoint:TestPoint_Pad_D1.5mm")
+			(fields
+				(field
+					(name "MPN") "bare pad, no part")
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "MPN")
+				(value "bare pad, no part")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ba202157-1155-4509-b65b-8d8de8fa39a2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP12")
+			(value "+5V")
+			(footprint "TestPoint:TestPoint_Keystone_5019_Miniature")
+			(fields
+				(field
+					(name "MPN") "Keystone 5019")
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Keystone_5019_Miniature")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "MPN")
+				(value "Keystone 5019")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8d269cdd-b544-436b-9046-90f609a5ebdd")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP13")
+			(value "GND")
+			(footprint "TestPoint:TestPoint_Keystone_5019_Miniature")
+			(fields
+				(field
+					(name "MPN") "Keystone 5019")
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Keystone_5019_Miniature")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "MPN")
+				(value "Keystone 5019")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6679383b-b2ee-411d-ba2e-391fa31db8fa")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP14")
+			(value "PA rail")
+			(footprint "TestPoint:TestPoint_Keystone_5019_Miniature")
+			(fields
+				(field
+					(name "MPN") "Keystone 5019")
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Keystone_5019_Miniature")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "MPN")
+				(value "Keystone 5019")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "01dd5b7e-3544-42aa-bd91-9d241aa636ce")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP15")
+			(value "Q2 gate")
+			(footprint "TestPoint:TestPoint_Keystone_5019_Miniature")
+			(fields
+				(field
+					(name "MPN") "Keystone 5019")
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Keystone_5019_Miniature")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "MPN")
+				(value "Keystone 5019")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8945390c-f174-4526-a853-e675be894340")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U1")
+			(value "74LVC1G17")
+			(footprint "Package_TO_SOT_SMD:SOT-23-5")
+			(fields
+				(field
+					(name "MPN") "TI SN74LVC1G17DBVR")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23-5")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "74xGxx")
+				(part "74LVC1G17")
+				(description "Single Schmitt Buffer Gate, Low-Voltage CMOS")
+			)
+			(property
+				(name "MPN")
+				(value "TI SN74LVC1G17DBVR")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Single Gate Buff Schmitt LVC CMOS")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOT?23* SOT?553* Texas?R-PDSO-G5?DCK* Texas?R-PDSO-N5?DRL* Texas?X2SON*0.8x0.8mm*P0.48mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6af2a844-c039-43b7-9c1e-ef158cd16da2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U2")
+			(value "TPS62175")
+			(footprint "Package_SON:WSON-10-1EP_2x3mm_P0.5mm_EP0.84x2.4mm")
+			(fields
+				(field
+					(name "MPN") "TI TPS62175DQCR")
+				(field
+					(name "Footprint") "Package_SON:WSON-10-1EP_2x3mm_P0.5mm_EP0.84x2.4mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "pa40")
+				(part "TPS62175")
+				(description "TI TPS62175 28 V 0.5 A step-down converter, adjustable, WSON-10 (pinout SLVSB35C)")
+			)
+			(property
+				(name "MPN")
+				(value "TI TPS62175DQCR")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "43eb522a-f931-4cba-808a-3833cbcb0cd5")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "7")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "Y1")
+			(value "7.030 MHz")
+			(footprint "pa40:Crystal_HC49-US_THT_SMD_Combo")
+			(fields
+				(field
+					(name "MPN") "IQD LFXTAL011525Bulk (HC-49/U, CL 30 pF)")
+				(field
+					(name "Footprint") "pa40:Crystal_HC49-US_THT_SMD_Combo")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "Crystal_Small")
+				(description "Two pin crystal, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "IQD LFXTAL011525Bulk (HC-49/U, CL 30 pF)")
+			)
+			(property
+				(name "Sheetname")
+				(value "pa40-classe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pa40-classe.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "quartz ceramic resonator oscillator")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Crystal*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "300f2032-887e-4850-ad8e-97c0c00b51d1")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "74xGxx")
+			(part "74LVC1G17")
+			(description "Single Schmitt Buffer Gate, Low-Voltage CMOS")
+			(docs "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf")
+			(footprints
+				(fp "SOT?23*")
+				(fp "SOT?553*")
+				(fp "Texas?R-PDSO-G5?DCK*")
+				(fp "Texas?R-PDSO-N5?DRL*")
+				(fp "Texas?X2SON*0.8x0.8mm*P0.48mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "74LVC1G17")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf")
+				(field
+					(name "Description") "Single Schmitt Buffer Gate, Low-Voltage CMOS")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "NC")
+					(type "no_connect")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "4")
+					(name "")
+					(type "output")
+				)
+				(pin
+					(num "5")
+					(name "VCC")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "Connector")
+			(part "Barrel_Jack_Switch")
+			(description "DC Barrel Jack with an internal switch")
+			(footprints
+				(fp "BarrelJack*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Barrel_Jack_Switch")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "DC Barrel Jack with an internal switch")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Connector")
+			(part "Conn_Coaxial")
+			(description "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)")
+			(footprints
+				(fp "*BNC*")
+				(fp "*SMA*")
+				(fp "*SMB*")
+				(fp "*SMC*")
+				(fp "*Cinch*")
+				(fp "*LEMO*")
+				(fp "*UMRF*")
+				(fp "*MCX*")
+				(fp "*U.FL*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Conn_Coaxial")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "In")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "Ext")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Connector")
+			(part "TestPoint")
+			(description "test point")
+			(footprints
+				(fp "Pin*")
+				(fp "Test*")
+			)
+			(fields
+				(field
+					(name "Reference") "TP")
+				(field
+					(name "Value") "TestPoint")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "test point")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Connector_Audio")
+			(part "AudioJack3")
+			(description "Audio Jack, 3 Poles (Stereo / TRS)")
+			(footprints
+				(fp "Jack*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "AudioJack3")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Audio Jack, 3 Poles (Stereo / TRS)")
+			)
+			(pins
+				(pin
+					(num "R")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "S")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "T")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "C_Small")
+			(description "Unpolarized capacitor, small symbol")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C_Small")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "C_Trim_Small")
+			(description "Trimmable capacitor, small symbol")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C_Trim_Small")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Trimmable capacitor, small symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "Crystal_Small")
+			(description "Two pin crystal, small symbol")
+			(footprints
+				(fp "Crystal*")
+			)
+			(fields
+				(field
+					(name "Reference") "Y")
+				(field
+					(name "Value") "Crystal_Small")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Two pin crystal, small symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "D_Zener_Small")
+			(description "Zener diode, small symbol")
+			(footprints
+				(fp "TO-???*")
+				(fp "*_Diode_*")
+				(fp "*SingleDiode*")
+				(fp "D_*")
+			)
+			(fields
+				(field
+					(name "Reference") "D")
+				(field
+					(name "Value") "D_Zener_Small")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Zener diode, small symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "K")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "A")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "FerriteBead_Small")
+			(description "Ferrite bead, small symbol")
+			(footprints
+				(fp "Inductor_*")
+				(fp "L_*")
+				(fp "*Ferrite*")
+			)
+			(fields
+				(field
+					(name "Reference") "FB")
+				(field
+					(name "Value") "FerriteBead_Small")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Ferrite bead, small symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "L_Small")
+			(description "Inductor, small symbol")
+			(footprints
+				(fp "Choke_*")
+				(fp "*Coil*")
+				(fp "Inductor_*")
+				(fp "L_*")
+			)
+			(fields
+				(field
+					(name "Reference") "L")
+				(field
+					(name "Value") "L_Small")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Inductor, small symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "R_Shunt")
+			(description "Shunt resistor")
+			(footprints
+				(fp "R_*Shunt*")
+			)
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "R_Shunt")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Shunt resistor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "3")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "4")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "R_Small_US")
+			(description "Resistor, small US symbol")
+			(footprints
+				(fp "R_*")
+			)
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "R_Small_US")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor, small US symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Jumper")
+			(part "SolderJumper_2_Open")
+			(description "Solder Jumper, 2-pole, open")
+			(footprints
+				(fp "SolderJumper*Open*")
+			)
+			(fields
+				(field
+					(name "Reference") "JP")
+				(field
+					(name "Value") "SolderJumper_2_Open")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Solder Jumper, 2-pole, open")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "A")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "B")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Mechanical")
+			(part "MountingHole_Pad")
+			(description "Mounting Hole with connection")
+			(footprints
+				(fp "MountingHole*Pad*")
+			)
+			(fields
+				(field
+					(name "Reference") "H")
+				(field
+					(name "Value") "MountingHole_Pad")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Mounting Hole with connection")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "input")
+				)
+			)
+		)
+		(libpart
+			(lib "pa40")
+			(part "EPC2036")
+			(description "N-MOSFET transistor")
+			(fields
+				(field
+					(name "Reference") "Q")
+				(field
+					(name "Value") "Q_NMOS")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "N-MOSFET transistor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "G")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "S")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "D")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "S")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "pa40")
+			(part "Q_NPN_BEC")
+			(description "NPN bipolar junction transistor")
+			(fields
+				(field
+					(name "Reference") "Q")
+				(field
+					(name "Value") "Q_NPN")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "NPN bipolar junction transistor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "B")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "E")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "C")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "pa40")
+			(part "Q_PMOS_GSD")
+			(description "P-MOSFET transistor")
+			(fields
+				(field
+					(name "Reference") "Q")
+				(field
+					(name "Value") "Q_PMOS")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "P-MOSFET transistor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "G")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "S")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "D")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "pa40")
+			(part "TPS62175")
+			(description "TI TPS62175 28 V 0.5 A step-down converter, adjustable, WSON-10 (pinout SLVSB35C)")
+			(docs "https://www.ti.com/lit/ds/symlink/tps62175.pdf")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "TPS62175")
+				(field
+					(name "Footprint") "Package_SON:WSON-10-1EP_2x3mm_P0.5mm_EP0.84x2.4mm")
+				(field
+					(name "Datasheet") "https://www.ti.com/lit/ds/symlink/tps62175.pdf")
+				(field
+					(name "Description") "TI TPS62175 28 V 0.5 A step-down converter, adjustable, WSON-10 (pinout SLVSB35C)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "PGND")
+					(type "power_in")
+				)
+				(pin
+					(num "2")
+					(name "VIN")
+					(type "power_in")
+				)
+				(pin
+					(num "3")
+					(name "EN")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "NC")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "FB")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "AGND")
+					(type "power_in")
+				)
+				(pin
+					(num "7")
+					(name "PG")
+					(type "open_collector")
+				)
+				(pin
+					(num "8")
+					(name "SLEEP")
+					(type "input")
+				)
+				(pin
+					(num "9")
+					(name "SW")
+					(type "power_out")
+				)
+				(pin
+					(num "10")
+					(name "VOS")
+					(type "input")
+				)
+				(pin
+					(num "11")
+					(name "EP")
+					(type "passive")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "74xGxx")
+			(uri "${KICAD10_SYMBOL_DIR}/74xGxx.kicad_sym")
+		)
+		(library
+			(logical "Connector")
+			(uri "${KICAD10_SYMBOL_DIR}/Connector.kicad_sym")
+		)
+		(library
+			(logical "Connector_Audio")
+			(uri "${KICAD10_SYMBOL_DIR}/Connector_Audio.kicad_sym")
+		)
+		(library
+			(logical "Device")
+			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")
+		)
+		(library
+			(logical "Jumper")
+			(uri "${KICAD10_SYMBOL_DIR}/Jumper.kicad_sym")
+		)
+		(library
+			(logical "Mechanical")
+			(uri "${KICAD10_SYMBOL_DIR}/Mechanical.kicad_sym")
+		)
+		(library
+			(logical "pa40")
+			(uri "${KIPRJMOD}/pa40.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "+5V")
+			(class "Default")
+			(node
+				(ref "C13")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C23")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FB3")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R10")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R5")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R8")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP12")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "5")
+				(pinfunction "VCC_5")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "2")
+			(name "+12V")
+			(class "Default")
+			(node
+				(ref "C10")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FB2")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "JP1")
+				(pin "2")
+				(pinfunction "B_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q2")
+				(pin "2")
+				(pinfunction "S_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R12")
+				(pin "4")
+				(pinfunction "4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "R2")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "3")
+			(name "/+12V_PA")
+			(class "Default")
+			(node
+				(ref "C14")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C15")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C4")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "L1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q2")
+				(pin "3")
+				(pinfunction "D_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP14")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "4")
+			(name "/drain")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C2")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "L1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q1")
+				(pin "3")
+				(pinfunction "D_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP6")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "5")
+			(name "/gate")
+			(class "Default")
+			(node
+				(ref "D1")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q1")
+				(pin "1")
+				(pinfunction "G_1")
+				(pintype "input")
+			)
+			(node
+				(ref "R1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP4")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "6")
+			(name "/out_50r")
+			(class "Default")
+			(node
+				(ref "C16")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C17")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C18")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "L2")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "L3")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP10")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "7")
+			(name "/rf_out")
+			(class "Default")
+			(node
+				(ref "C17")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C18")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C19")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "1")
+				(pinfunction "In_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "L3")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "8")
+			(name "/xo")
+			(class "Default")
+			(node
+				(ref "C8")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R10")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R11")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP8")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "9")
+			(name "GND")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C10")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C13")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C14")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C15")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C16")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C19")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C21")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C22")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C23")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C5")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C6")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C7")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "D1")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "H1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "input")
+			)
+			(node
+				(ref "H2")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "input")
+			)
+			(node
+				(ref "H3")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "input")
+			)
+			(node
+				(ref "H4")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "input")
+			)
+			(node
+				(ref "J1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "2")
+				(pinfunction "Ext_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J4")
+				(pin "S")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q1")
+				(pin "2")
+				(pinfunction "S_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q1")
+				(pin "4")
+				(pinfunction "S_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "R11")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R14")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R6")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R7")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP11")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP13")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP3")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP5")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP7")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP9")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "3")
+				(pinfunction "GND_3")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "1")
+				(pinfunction "PGND_1")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "11")
+				(pinfunction "EP_11")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "4")
+				(pinfunction "NC_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "6")
+				(pinfunction "AGND_6")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "10")
+			(name "Net-(C2-Pad2)")
+			(class "Default")
+			(node
+				(ref "C2")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "L2")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "11")
+			(name "Net-(C6-Pad1)")
+			(class "Default")
+			(node
+				(ref "C6")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R9")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "Y1")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "12")
+			(name "Net-(C20-Pad2)")
+			(class "Default")
+			(node
+				(ref "C20")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C9")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "Y1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "13")
+			(name "Net-(J4-PadT)")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "T")
+				(pintype "passive")
+			)
+			(node
+				(ref "R3")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "14")
+			(name "Net-(JP1-A)")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "JP1")
+				(pin "1")
+				(pinfunction "A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R12")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "15")
+			(name "Net-(Q2-G)")
+			(class "Default")
+			(node
+				(ref "C4")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q2")
+				(pin "1")
+				(pinfunction "G_1")
+				(pintype "input")
+			)
+			(node
+				(ref "R2")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R3")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP15")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "16")
+			(name "Net-(Q4-B)")
+			(class "Default")
+			(node
+				(ref "C20")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C5")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C9")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q4")
+				(pin "1")
+				(pinfunction "B_1")
+				(pintype "input")
+			)
+			(node
+				(ref "R5")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R6")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "17")
+			(name "Net-(Q4-C)")
+			(class "Default")
+			(node
+				(ref "C8")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q4")
+				(pin "3")
+				(pinfunction "C_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "R8")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R9")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "18")
+			(name "Net-(Q4-E)")
+			(class "Default")
+			(node
+				(ref "C7")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q4")
+				(pin "2")
+				(pinfunction "E_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R7")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "19")
+			(name "Net-(R1-Pad1)")
+			(class "Default")
+			(node
+				(ref "R1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "4")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "20")
+			(name "Net-(R12-Pad2)")
+			(class "Default")
+			(node
+				(ref "R12")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "21")
+			(name "Net-(R12-Pad3)")
+			(class "Default")
+			(node
+				(ref "R12")
+				(pin "3")
+				(pinfunction "3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP2")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "22")
+			(name "Net-(U2-EN)")
+			(class "Default")
+			(node
+				(ref "C21")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FB2")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "2")
+				(pinfunction "VIN_2")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "3")
+				(pinfunction "EN_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "23")
+			(name "Net-(U2-FB)")
+			(class "Default")
+			(node
+				(ref "R13")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R14")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "5")
+				(pinfunction "FB_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "24")
+			(name "Net-(U2-SLEEP)")
+			(class "Default")
+			(node
+				(ref "C22")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "FB3")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "L4")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R13")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "10")
+				(pinfunction "VOS_10")
+				(pintype "input")
+			)
+			(node
+				(ref "U2")
+				(pin "8")
+				(pinfunction "SLEEP_8")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "25")
+			(name "Net-(U2-SW)")
+			(class "Default")
+			(node
+				(ref "L4")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "9")
+				(pinfunction "SW_9")
+				(pintype "power_out")
+			)
+		)
+		(net
+			(code "26")
+			(name "unconnected-(J1-Pad3)")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "3")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "27")
+			(name "unconnected-(J4-PadR)")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "R")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "28")
+			(name "unconnected-(U1-NC-Pad1)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "1")
+				(pinfunction "NC_1")
+				(pintype "no_connect")
+			)
+		)
+		(net
+			(code "29")
+			(name "unconnected-(U2-PG-Pad7)")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "7")
+				(pinfunction "PG_7")
+				(pintype "open_collector+no_connect")
+			)
+		)
+	)
+)

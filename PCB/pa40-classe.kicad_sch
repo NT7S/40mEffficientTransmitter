@@ -5,6 +5,129 @@
  (comment 2 "Rev 7: DC jack J1, 3.5 mm key jack J4, J2 Molex 0731000105 BNC. Rev 6 (was F): TP4-TP15, DNP D1")
  (comment 3 "Rev 5 (was E): SMT, TPS62175 buck. Prototype revs 1-6 were A-F"))
 (lib_symbols
+(symbol "Mechanical:MountingHole_Pad"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "H"
+			(at 0 6.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 0 4.445 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "mounting hole"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "MountingHole*Pad*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "MountingHole_Pad_0_1"
+			(circle
+				(center 0 1.27)
+				(radius 1.27)
+				(stroke
+					(width 1.27)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "MountingHole_Pad_1_1"
+			(pin input line
+				(at 0 -2.54 90)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 (symbol "Connector:Barrel_Jack_Switch"
 		(pin_names
 			(hide yes)
@@ -3944,7 +4067,7 @@
  (property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 109.22 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
  (property "Datasheet" "~" (at 109.22 86.36 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "KEMET C1206C391J2GACTU + C1206C330J2GACTU" (at 109.22 86.36 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "fe156eaa-2e36-439e-ac6a-9fa6d42acf5c")) (pin "2" (uuid "62996ab0-c1b1-402b-8a51-8726bc345261"))
  (instances (project "pa40-classe" (path "/6d406689-1d6f-4edb-8619-6554cb1e1916" (reference "C2") (unit 1)))))
-(symbol (lib_id "Device:L_Small") (at 127.0 86.36 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d76b69fb-6424-4d3c-b296-5603f279625a")
+(symbol (lib_id "Device:L_Small") (at 127.0 86.36 90) (mirror y) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d76b69fb-6424-4d3c-b296-5603f279625a")
  (property "Reference" "L2" (at 127.0 80.01 90) (effects (font (size 1.27 1.27))))
  (property "Value" "2.18u T80-6 22t #16" (at 127.0 82.55 90) (effects (font (size 1.27 1.27))))
  (property "Footprint" "pa40:L_Toroid_T80_Flat_P10.16mm_Drill1.6mm" (at 127.0 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
@@ -4370,6 +4493,55 @@
  (property "Footprint" "" (at 114.3 144.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
  (property "Datasheet" "~" (at 114.3 144.78 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "897162f3-8946-4682-a1dd-b45254828e9b"))
  (instances (project "pa40-classe" (path "/6d406689-1d6f-4edb-8619-6554cb1e1916" (reference "#PWR43") (unit 1)))))
+(text "Mounting holes: plated M3 pads, tied to GND" (exclude_from_sim no) (at 172.72 30.48 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "e57a7caa-cd87-47d1-bb18-e1e8d0347c66"))
+(symbol (lib_id "Mechanical:MountingHole_Pad") (at 175.26 38.1 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "fd776354-9abb-4907-8769-ace0834de854")
+ (property "Reference" "H1" (at 177.8 36.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+ (property "Value" "MountingHole_Pad" (at 177.8 39.37 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+ (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via" (at 175.26 38.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+ (property "Datasheet" "~" (at 175.26 38.1 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 175.26 38.1 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "10ea7ec5-ad63-45d0-b05f-c9a0162b6e49"))
+ (instances (project "pa40-classe" (path "/6d406689-1d6f-4edb-8619-6554cb1e1916" (reference "H1") (unit 1)))))
+(symbol (lib_id "power:GND") (at 175.26 40.64 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "c74742b5-a377-4295-9e54-1b5ea5d15592")
+ (property "Reference" "#PWR44" (at 175.26 40.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+ (property "Value" "GND" (at 175.26 44.45 0) (effects (font (size 1.27 1.27))))
+ (property "Footprint" "" (at 175.26 40.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+ (property "Datasheet" "~" (at 175.26 40.64 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "a339689f-7ba9-4080-bae2-569370c7bb9f"))
+ (instances (project "pa40-classe" (path "/6d406689-1d6f-4edb-8619-6554cb1e1916" (reference "#PWR44") (unit 1)))))
+(symbol (lib_id "Mechanical:MountingHole_Pad") (at 182.88 38.1 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "4fc63596-9ab4-4a44-85b9-ed868ee7d052")
+ (property "Reference" "H2" (at 185.42 36.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+ (property "Value" "MountingHole_Pad" (at 185.42 39.37 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+ (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via" (at 182.88 38.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+ (property "Datasheet" "~" (at 182.88 38.1 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 182.88 38.1 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "9b10b4b4-5cef-44af-9b6a-29aa9c8867d8"))
+ (instances (project "pa40-classe" (path "/6d406689-1d6f-4edb-8619-6554cb1e1916" (reference "H2") (unit 1)))))
+(symbol (lib_id "power:GND") (at 182.88 40.64 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "6c842283-41d9-4cb4-9a82-0a29bf59e014")
+ (property "Reference" "#PWR45" (at 182.88 40.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+ (property "Value" "GND" (at 182.88 44.45 0) (effects (font (size 1.27 1.27))))
+ (property "Footprint" "" (at 182.88 40.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+ (property "Datasheet" "~" (at 182.88 40.64 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "a2de2711-c34f-4240-bdff-26e7626179e5"))
+ (instances (project "pa40-classe" (path "/6d406689-1d6f-4edb-8619-6554cb1e1916" (reference "#PWR45") (unit 1)))))
+(symbol (lib_id "Mechanical:MountingHole_Pad") (at 190.5 38.1 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "96171e2e-93b9-4e0e-93ef-a4e27ba6335c")
+ (property "Reference" "H3" (at 193.04 36.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+ (property "Value" "MountingHole_Pad" (at 193.04 39.37 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+ (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via" (at 190.5 38.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+ (property "Datasheet" "~" (at 190.5 38.1 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 190.5 38.1 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "6e082ee5-587c-4cea-a74c-98ff3f11a4f3"))
+ (instances (project "pa40-classe" (path "/6d406689-1d6f-4edb-8619-6554cb1e1916" (reference "H3") (unit 1)))))
+(symbol (lib_id "power:GND") (at 190.5 40.64 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "833dc8d4-178b-4e84-a3e1-9124e39a4cb8")
+ (property "Reference" "#PWR46" (at 190.5 40.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+ (property "Value" "GND" (at 190.5 44.45 0) (effects (font (size 1.27 1.27))))
+ (property "Footprint" "" (at 190.5 40.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+ (property "Datasheet" "~" (at 190.5 40.64 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "72abf8de-c117-457e-8393-de1e68f198f2"))
+ (instances (project "pa40-classe" (path "/6d406689-1d6f-4edb-8619-6554cb1e1916" (reference "#PWR46") (unit 1)))))
+(symbol (lib_id "Mechanical:MountingHole_Pad") (at 198.12 38.1 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "438517ac-1003-4788-ab9d-185bbcb2c243")
+ (property "Reference" "H4" (at 200.66 36.83 0) (effects (font (size 1.27 1.27)) (justify left)))
+ (property "Value" "MountingHole_Pad" (at 200.66 39.37 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+ (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via" (at 198.12 38.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+ (property "Datasheet" "~" (at 198.12 38.1 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "" (at 198.12 38.1 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "40d57faf-0d50-4f8e-a6a9-73e0d135d467"))
+ (instances (project "pa40-classe" (path "/6d406689-1d6f-4edb-8619-6554cb1e1916" (reference "H4") (unit 1)))))
+(symbol (lib_id "power:GND") (at 198.12 40.64 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "aeedb8b1-7442-48a1-a85e-17db13352dd9")
+ (property "Reference" "#PWR47" (at 198.12 40.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+ (property "Value" "GND" (at 198.12 44.45 0) (effects (font (size 1.27 1.27))))
+ (property "Footprint" "" (at 198.12 40.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+ (property "Datasheet" "~" (at 198.12 40.64 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "f9774156-9a63-444c-bf7e-446d56b96ab7"))
+ (instances (project "pa40-classe" (path "/6d406689-1d6f-4edb-8619-6554cb1e1916" (reference "#PWR47") (unit 1)))))
 (sheet_instances (path "/" (page "1")))
 (embedded_fonts no)
 )

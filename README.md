@@ -8,7 +8,7 @@ The full design justification, simulation results, build plan and test plan are 
 
 ## Status
 
-Prototype, **rev 7**, schematic stage. There is no PCB layout yet.
+Prototype, **rev 7**. The PCB layout is complete: 100 × 60 mm, 2-layer, 1.6 mm FR4, designed for JLCPCB (blue soldermask, white silkscreen, ENIG, tented vias). DRC is clean (0 violations, 0 unconnected items, 0 schematic-parity issues). ERC reports 0 errors.
 
 Prototype revisions are numbered (1, 2, 3, ...). Letters, starting from A, are kept for released boards. Revisions 1-6 were first labelled A-F.
 
@@ -28,17 +28,17 @@ Only rev 7 files are in this repository.
 
 | Folder | Contents |
 |--------|----------|
-| [`PCB/`](PCB/) | KiCad 9 project (`pa40-classe`), project symbol library `pa40.kicad_sym`, and project-local footprint libraries in `PCB/lib/` (`pa40.pretty` plus the subset of KiCad stock footprints the design uses) |
-| [`docs/`](docs/) | Schematic PDF and SVG, netlist, ERC report, footprint renders, [datasheet links](docs/datasheets.md) |
+| [`PCB/`](PCB/) | KiCad 10.0.8 project (`pa40-classe`): schematic, board, custom design rules, project symbol library `pa40.kicad_sym`, project-local footprint libraries in `PCB/lib/` (`pa40.pretty` plus the KiCad stock subset the design uses, including `MountingHole.pretty`), 3-D models in `PCB/pa40.3dshapes/`, layout scripts and notes in `PCB/layout/`, and the floorplan in `PCB/floorplan/` |
+| [`docs/`](docs/) | Schematic PDF and SVG, netlist, ERC and DRC reports, footprint renders, [layout renders](docs/layout/), [datasheet links](docs/datasheets.md) |
 | [`bom/`](bom/) | DigiKey BOM with prices and stock (`bom-digikey-rev7.csv`), BOM bulk-add file for one board, and cart file for two boards plus spares |
 | [`report/`](report/) | LaTeX source and built PDF of the design report, with the scripts that write its tables |
 | [`sim/`](sim/) | ngspice decks and Python scripts for the PA, LPF, keying, oscillator and gate-drive simulations |
-| [`print/`](print/) | Printable DigiKey cart checklist |
+| [`print/`](print/) | Printable DigiKey cart checklist, and [JLCPCB order notes](print/jlcpcb-order-notes.md) |
 | [`tools/`](tools/) | Schematic and footprint generators, and `export_docs.sh` |
 
 ## Building
 
-- Bare boards from JLCPCB; parts from DigiKey; the boards are hand-populated.
+- Bare boards from JLCPCB (see `print/jlcpcb-order-notes.md`); parts from DigiKey; the boards are hand-populated.
 - Y1 is not in the DigiKey cart. Supply your own 7.030 MHz HC-49 crystal. The footprint takes an HC-49/US crystal, through-hole (4.88 mm lead pitch) or SMD. The BOM part (IQD LFXTAL011525Bulk) is CL 30 pF, but the oscillator simulation assumed CL 20 pF, so trim C9 for frequency.
 - L1-L3 are hand-wound toroids (L1 FT-50-61; L2, L3 T80-6) and are not in the DigiKey cart. Winding data is in the report.
 - D1 is unfitted. JP1 is a solder jumper: bridge it if R12 is not fitted.
@@ -46,9 +46,12 @@ Only rev 7 files are in this repository.
 
 ## Regenerating
 
-- Schematic: `gen.py` writes the schematic, the symbol library and `sym-lib-table`. Run it from `PCB/` (`cd PCB && python3 ../tools/gen.py`). It reads KiCad's stock symbols from `/usr/share/kicad/symbols/`.
-- Footprints: `python3 tools/gen_fp.py` rewrites `PCB/lib/pa40.pretty`.
-- Docs: after any schematic change, run `tools/export_docs.sh` (needs KiCad `kicad-cli`). It rewrites the schematic PDF, netlist, SVG and `docs/erc.rpt`.
+The committed schematic and footprints already include later in-place edits (L2 pin swap, L1 nylon-screw hole, Etherkit and OSHW logos, courtyard post-processing). Do not re-run `gen.py` or `gen_fp.py` against the live files unless you intend to regenerate from scratch; both assign new UUIDs and `gen_fp.py` would drop the post-processed courtyards.
+
+- Schematic (from scratch only): `gen.py` writes the schematic, the symbol library and `sym-lib-table`. Run it from `PCB/` (`cd PCB && python3 ../tools/gen.py`). It reads KiCad's stock symbols from `/usr/share/kicad/symbols/`.
+- Footprints (from scratch only): `python3 tools/gen_fp.py` rewrites `PCB/lib/pa40.pretty`.
+- Layout: from `PCB/`, `python3 layout/route.py` reloads the board, strips tracks and zones, and re-routes. Then `sh layout/drc.sh` (needs `kicad-cli`). Top copper photo: `python3 layout/render_cu.py`. 3-D views: `python3 layout/make_3d.py` (pass `--use-board-stackup-colors` is already built in). The latest renders and notes are `PCB/layout/routing-v5-*.png` and `PCB/layout/routing-v5.md`.
+- Docs: `tools/export_docs.sh` rewrites the schematic PDF, netlist, SVG, `docs/erc.rpt` and, when the board is present, `docs/drc.rpt` and copies the v5 layout renders into `docs/layout/`.
 - Report: in `report/`, run `python3 gen_tables.py`, `python3 gen_budget_table.py` and `python3 gen_gate_tables.py`, then `latexmk -pdf -jobname=report main.tex`.
 - Simulations: the decks in `sim/` run in ngspice. Raw waveform output (`.dat`, `.dat.gz`, `.npz`) is not committed; rerun the scripts to regenerate it.
 

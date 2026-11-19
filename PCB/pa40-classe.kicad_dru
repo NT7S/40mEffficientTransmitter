@@ -1,0 +1,8 @@
+(version 1)
+# EPC2036 LGA (0.45 mm bump pitch, 0.3 mm pads): the land pattern itself has 0.15 mm pad gaps.
+# Allow 0.15 mm only for items touching Q1; the rest of the board keeps the 0.2 mm netclass clearance.
+# JLCPCB standard 2-layer capability is 0.127 mm (5 mil) trace/space, so 0.15 mm is inside it.
+(rule "Q1 EPC2036 fine pitch"
+  (condition "A.memberOfFootprint('Q1') || B.memberOfFootprint('Q1')")
+  (constraint clearance (min 0.15)))
+

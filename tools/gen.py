@@ -66,7 +66,8 @@ def xf(at,rot,mir,p):
     return (round(at[0]+xr,2), round(at[1]-yr,2))
 
 R6='Resistor_SMD:R_0603_1608Metric'; C6='Capacitor_SMD:C_0603_1608Metric'; C8='Capacitor_SMD:C_0805_2012Metric'; C12='Capacitor_SMD:C_1206_3216Metric'
-FP={'J1':'Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal',
+FP={'H1':'MountingHole:MountingHole_3.2mm_M3_Pad_Via','H2':'MountingHole:MountingHole_3.2mm_M3_Pad_Via','H3':'MountingHole:MountingHole_3.2mm_M3_Pad_Via','H4':'MountingHole:MountingHole_3.2mm_M3_Pad_Via',
+ 'J1':'Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal',
  'J2':'pa40:BNC_Molex_73100-0105_Horizontal',
  'J4':'pa40:Jack_3.5mm_CUI_SJ1-3523N_Horizontal_DS',
  'R12':'Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T1.19mm',
@@ -218,7 +219,8 @@ W((D[0],yt),(x1,yt)); W(P[('C1','1')],(x1,yt)); J((x1,yt)); pwr('GND','GND',P[('
 sym('Device:C_Small','C2','424.5p C0G',(109.22,yt),rot=90,refat=(109.22,80.01),valat=(109.22,82.55),just=None)
 a,b=sorted([P[('C2','1')],P[('C2','2')]])
 W((x1,yt),a)
-sym('Device:L_Small','L2','2.18u T80-6 22t #16',(127.0,yt),rot=90,refat=(127.0,80.01),valat=(127.0,82.55),just=None)
+# rev 7 layout: L2 mirrored (pin 2 = C2 end) to shorten the C2-L2 run on the PCB
+sym('Device:L_Small','L2','2.18u T80-6 22t #16',(127.0,yt),rot=90,mir='y',refat=(127.0,80.01),valat=(127.0,82.55),just=None)
 c,d=sorted([P[('L2','1')],P[('L2','2')]])
 W(b,c)
 xo=142.24
@@ -431,6 +433,12 @@ tpn=[
 "   TP13 GND, TP14 PA rail, TP15 Q2 gate. PA current: TP1-TP2 across R12 (10 mV/A). RF output: J2.",
 ]
 for i,s in enumerate(tpn): T(s,(20.32,172.72+i*3.556))
+# rev 7 layout v2: plated M3 mounting holes H1-H4 tied to GND (same approach as Si5351AVFO)
+T('Mounting holes: plated M3 pads, tied to GND',(172.72,30.48),1.27)
+for i,x in enumerate((175.26,182.88,190.5,198.12)):
+    ref=f'H{i+1}'
+    sym('Mechanical:MountingHole_Pad',ref,'MountingHole_Pad',(x,38.1),refat=(x+2.54,36.83),valat=(x+2.54,39.37),hide_val=True,in_bom=False)
+    pwr('GND','GND',P[(ref,'1')])
 emit_wires()
 tb=f'''(title_block (title "40 m 5 W GaN class E CW TX: XO, PMOS keying, LPF") (date "2026-11-18") (rev "7")
  (company "Etherkit / NT7S")

@@ -1,21 +1,182 @@
-(footprint "C_Trimmer_Voltronics_JZ" (version 20241229) (generator "pa40_gen_fp") (generator_version "1") (layer "F.Cu")
- (descr "Knowles Voltronics JZ-series SMD trimmer, 4.5 x 3.2 x 1.5 mm; land 0.85 x 1.4 mm pads, 4.75 mm outer / 3.05 mm inner (J-Series datasheet, JZ page)") (tags "trimmer capacitor JZ300 Voltronics")
- (property "Reference" "REF**" (at 0 -2.9 0) (layer "F.SilkS") (uuid "7cf994f1-0c12-40a3-8965-76458a8c917e") (effects (font (size 1.0 1.0) (thickness 0.15))))
- (property "Value" "C_Trimmer_Voltronics_JZ" (at 0 2.9 0) (layer "F.Fab") (uuid "068f6529-20ed-494a-8ed4-b1c4145d917d") (effects (font (size 1.0 1.0) (thickness 0.15))))
- (property "Datasheet" "" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "39588829-52c5-4a6d-9eab-395b463f69b8") (effects (font (size 1.0 1.0) (thickness 0.15))))
- (property "Description" "Knowles Voltronics JZ-series SMD trimmer, 4.5 x 3.2 x 1.5 mm; land 0.85 x 1.4 mm pads, 4.75 mm outer / 3.05 mm inner (J-Series datasheet, JZ page)" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "8f825014-11d0-47b3-bd0a-fe8fbfaf3383") (effects (font (size 1.0 1.0) (thickness 0.15))))
- (attr smd)
- (pad "1" smd rect (at -1.95 0) (size 0.85 1.4) (layers "F.Cu" "F.Paste" "F.Mask") (uuid "4b9fcf56-4749-4363-adf0-cbcda9c61d75"))
-(pad "2" smd rect (at 1.95 0) (size 0.85 1.4) (layers "F.Cu" "F.Paste" "F.Mask") (uuid "b9e1b2e9-048b-4cc3-a2de-e1388cfce0f7"))
-(fp_line (start -1.8500 -1.6000) (end 2.2500 -1.6000) (stroke (width 0.1) (type solid)) (layer "F.Fab") (uuid "34b82728-0f99-403e-8b8c-192cc128b113"))
-(fp_line (start 2.2500 -1.6000) (end 2.2500 1.6000) (stroke (width 0.1) (type solid)) (layer "F.Fab") (uuid "b4695c69-2390-4b62-906f-c2a3ef2b367b"))
-(fp_line (start 2.2500 1.6000) (end -1.8500 1.6000) (stroke (width 0.1) (type solid)) (layer "F.Fab") (uuid "0940634a-57ae-4bb3-b8ec-35e20c9db3a9"))
-(fp_line (start -1.8500 1.6000) (end -2.2500 1.2000) (stroke (width 0.1) (type solid)) (layer "F.Fab") (uuid "6977185d-0d05-4d40-a2da-746ea8d8ae66"))
-(fp_line (start -2.2500 1.2000) (end -2.2500 -1.2000) (stroke (width 0.1) (type solid)) (layer "F.Fab") (uuid "8632e32f-1a3f-419d-94cb-76def5aeaa29"))
-(fp_line (start -2.2500 -1.2000) (end -1.8500 -1.6000) (stroke (width 0.1) (type solid)) (layer "F.Fab") (uuid "0acf0ce5-0389-4807-b027-245df14c2480"))
-(fp_line (start -1.5000 -1.7500) (end 1.5000 -1.7500) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "7c3d004b-8174-4ce3-935f-d38fc5008766"))
-(fp_line (start -1.5000 1.7500) (end 1.5000 1.7500) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "f76b3017-2d62-4f11-a6ff-490370b0600e"))
-(fp_rect (start -2.7 -1.95) (end 2.7 1.95) (stroke (width 0.05) (type solid)) (fill no) (layer "F.CrtYd") (uuid "552315f1-c892-48c8-9c67-a1392ce0823c"))
-(fp_text user "${REFERENCE}" (at 0 0 0) (layer "F.Fab") (uuid "18642520-adcc-4c11-a19b-e57d39a54659") (effects (font (size 0.6 0.6) (thickness 0.15))))
- (embedded_fonts no)
+(footprint "C_Trimmer_Voltronics_JZ"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Knowles Voltronics JZ-series SMD trimmer, 4.5 x 3.2 x 1.5 mm; land 0.85 x 1.4 mm pads, 4.75 mm outer / 3.05 mm inner (J-Series datasheet, JZ page)")
+	(tags "trimmer capacitor JZ300 Voltronics")
+	(property "Reference" "REF**"
+		(at 0 -2.9 0)
+		(layer "F.SilkS")
+		(uuid "5991e2e5-d66c-4afc-9298-cfba99b398ae")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "C_Trimmer_Voltronics_JZ"
+		(at 0 2.9 0)
+		(layer "F.Fab")
+		(uuid "cd837b2f-e070-4986-97c6-874b99581b37")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d83e291e-996a-42c9-acf0-831f8498d6f4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Knowles Voltronics JZ-series SMD trimmer, 4.5 x 3.2 x 1.5 mm; land 0.85 x 1.4 mm pads, 4.75 mm outer / 3.05 mm inner (J-Series datasheet, JZ page)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c3f7bdc6-b12c-423f-80e8-b31a95c4eeb8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.5 -1.75)
+		(end 1.5 -1.75)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "de5c5514-8bd0-4c6d-aef2-8ec30953cf65")
+	)
+	(fp_line
+		(start -1.5 1.75)
+		(end 1.5 1.75)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3c6acd80-9ebc-4f5e-b8ab-8e4c428d4a32")
+	)
+	(fp_rect
+		(start -2.7 -1.95)
+		(end 2.7 1.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "b1fba61d-d912-4e45-8a09-eb792d6c1213")
+	)
+	(fp_line
+		(start -2.25 -1.2)
+		(end -1.85 -1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7ab01ed8-0ec7-415c-a1d7-3c25c462d9f5")
+	)
+	(fp_line
+		(start -2.25 1.2)
+		(end -2.25 -1.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4645a8f4-e676-466e-950d-74c1858e1d5f")
+	)
+	(fp_line
+		(start -1.85 -1.6)
+		(end 2.25 -1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1ce61dd8-5a74-47e6-8965-2a52ad5d8403")
+	)
+	(fp_line
+		(start -1.85 1.6)
+		(end -2.25 1.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5eb000a3-dfa5-40e2-9f6c-c4861743fb23")
+	)
+	(fp_line
+		(start 2.25 -1.6)
+		(end 2.25 1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ce7dafa1-b10c-478b-87ae-b820c70588f4")
+	)
+	(fp_line
+		(start 2.25 1.6)
+		(end -1.85 1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a68505a3-9c5d-4d1d-9c15-47bf4c2f5eb3")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "d564e9cf-49b2-449f-a08d-07ca570f12f9")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.95 0)
+		(size 0.85 1.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "01f4fea7-369a-4677-82b9-7ab3af6852cf")
+	)
+	(pad "2" smd rect
+		(at 1.95 0)
+		(size 0.85 1.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f141785c-53a4-4b03-b67d-4fde9cb54e39")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/pa40.3dshapes/C_Trimmer_Voltronics_JZ.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )

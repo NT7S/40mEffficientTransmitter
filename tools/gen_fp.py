@@ -1,7 +1,7 @@
 # Project-local footprints for pa40-classe rev 7. Dimensions cited in each descr.
 import uuid, math, os
 U=lambda: str(uuid.uuid4())
-OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','PCB','lib','pa40.pretty')
+OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'PCB', 'lib', 'pa40.pretty')
 def eff(sz=1.0,th=0.15): return f'(effects (font (size {sz} {sz}) (thickness {th})))'
 def prop(name,val,at,layer,hide=False,sz=1.0):
     return f'(property "{name}" "{val}" (at {at[0]} {at[1]} 0) (layer "{layer}"){" (hide yes)" if hide else ""} (uuid "{U()}") {eff(sz)})'
@@ -58,8 +58,8 @@ def toroid(name,descr,od_max,od_nom,id_nom,padx,pady,pad,drill,mount=None):
     write(name,descr,'toroid flat horizontal','through_hole',it,(0,-cr-1.2),(0,max(cy,cr)+1.2))
 toroid('L_Toroid_T80_Flat_P10.16mm_Drill1.6mm','Micrometals T-80 toroid mounted flat (OD 20.19 mm nom, 20.70 mm max coated; ID 12.57 mm; Ht 6.35 mm, T80-6 datasheet rev 20190524). Two leads exit below, holes 1.6 mm for #16 enamel or thinner; optional 3.2 mm NPTH for an M3 nylon screw',
        20.70,20.19,12.57,5.08,12.7,2.8,1.6,mount=3.2)
-toroid('L_Toroid_FT50_Flat_P7.62mm_Drill1.0mm','Fair-Rite FT-50 size toroid (5961000301: OD 12.7 +-0.25, ID 7.15, Ht 4.9 mm) mounted flat; holes 1.0 mm for #24 enamel',
-       12.95,12.7,7.15,3.81,8.89,2.0,1.0)
+toroid('L_Toroid_FT50_Flat_P7.62mm_Drill1.0mm','Fair-Rite FT-50 size toroid (5961000301: OD 12.7 +-0.25, ID 7.15, Ht 4.9 mm) mounted flat; holes 1.0 mm for #24 enamel; optional 3.2 mm NPTH for an M3 nylon screw (fits the 7.15 mm ID with room for 26 t #24)',
+       12.95,12.7,7.15,3.81,8.89,2.0,1.0,mount=3.2)
 
 # 3) EPC2036 land pattern: EPC2036 datasheet p.6 (SMD mask openings 200 um +20/-10, 450 um pitch;
 # stencil 250 um square, R60 corners, 100 um laser cut). Copper enlarged to 300 um so the 200 um opening
