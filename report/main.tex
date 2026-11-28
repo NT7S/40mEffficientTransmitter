@@ -789,12 +789,12 @@ This section is the build plan. The \todo{} boxes and photo frames are for notes
 \todo{Board thickness and copper weight (not specified in the design files); order number; date ordered; date received.}
 
 \subsection{Sourcing}
-The rev 7 DigiKey BOM (Appendix~\ref{app:bom}) totals \$31.03 for one board at DigiKey US quantity-1 prices read through the DigiKey API on 18 November 2026, or \$29.61 without the optional R12 shunt \cite{sameskyPJ102AH,sameskySJ1,molex73100,wurth74404042100}. Q1 (\$2.10), the C9 trimmer (\$3.45) and C10 (\$0.88) cost more than the earlier web-search prices. The probe pads TP4--TP11 are copper only and D1 is DNP. Prices exclude shipping and tax. Stock was read the same day; check it in the cart \cite{projkicad}. The Y1 crystal has no DigiKey API listing, so its price is the earlier web-search figure. Not available at DigiKey:
+The rev 7 DigiKey BOM (Appendix~\ref{app:bom}) totals \$30.10 for one board at DigiKey US quantity-1 prices read through the DigiKey API on 18 November 2026, or \$28.68 without the optional R12 shunt \cite{sameskyPJ102AH,sameskySJ1,molex73100,wurth74404042100}. Q1 (\$2.10), the C9 trimmer (\$3.45) and C10 (\$0.88) cost more than the earlier web-search prices. The probe pads TP4--TP11 are copper only and D1 is DNP. Prices exclude shipping and tax. Stock was read the same day; check it in the cart \cite{projkicad}. Y1 is not a DigiKey part: IQD lists it discontinued and there is no DigiKey API listing, so it is excluded from the total; supply your own (on hand). Not available at DigiKey:
 \begin{itemize}[nosep]
 \item T-80-6 cores (two, for L2 and L3): TME, rf-microwave.com, SV1AFN, Kits and Parts, or Amidon \cite{micrometalsT80}.
 \item Enamelled magnet wire: \#16 for L2 and \#24 for L1. The L3 gauge is not fixed in the design; \#18 is a suggestion.
 \end{itemize}
-C22 is now the Samsung CL21A226MOQNNNE (\SI{22}{\micro\farad} \SI{16}{\volt} X5R 0805), because the original \SI{10}{\volt} CL21A226MPQNNNE was out of stock at DigiKey. L4 is now the W\"urth 74404042100 (\SI{10}{\micro\henry}, 4018 size, on the existing LPS4018 pads), because the Coilcraft LPS4018-103MRC is only sold through DigiKey Marketplace; the W\"urth part saturates at \SI{1.7}{\ampere} \cite{wurth74404042100}, above the TPS62175's \SI{1.2}{\ampere} maximum switch current limit \cite{tiTPS62175}, and is semi-shielded, so keep it away from L2 and L3. The crystal, IQD LFXTAL011525Bulk, is listed as discontinued (Section~\ref{sec:risks}).
+C22 is now the Samsung CL21A226MOQNNNE (\SI{22}{\micro\farad} \SI{16}{\volt} X5R 0805), because the original \SI{10}{\volt} CL21A226MPQNNNE was out of stock at DigiKey. L4 is now the W\"urth 74404042100 (\SI{10}{\micro\henry}, 4018 size, on the existing LPS4018 pads), because the Coilcraft LPS4018-103MRC is only sold through DigiKey Marketplace; the W\"urth part saturates at \SI{1.7}{\ampere} \cite{wurth74404042100}, above the TPS62175's \SI{1.2}{\ampere} maximum switch current limit \cite{tiTPS62175}, and is semi-shielded, so keep it away from L2 and L3. The crystal, IQD LFXTAL011525Bulk, is listed as discontinued and is not a DigiKey part (Section~\ref{sec:risks}).
 \todo{Order numbers, substitutions and actual cost.}
 
 \subsection{Assembly order}
@@ -838,7 +838,8 @@ From EPC's hand-assembly note \cite{epchow2} and AN009 \cite{epcan009}:
 
 \subsection{Bring-up checklist}\label{sec:bringup}
 \begin{enumerate}[nosep]
-\item Before power: check for shorts on +12\,V, +5\,V and +12V\_PA to ground. Check that JP1 is open if R12 is fitted, or closed if not.
+\item Before power: check for shorts on +12\,V, +5\,V and +12V\_PA to ground.
+\item Verify the R12 sense traces run as Kelvin connections from R12's sense pads to TP1/TP2, with no copper resistance in the sense path. Check that JP1 is open if R12 is fitted, or closed if not --- otherwise the 12\,V rail is open.
 \item Apply \SI{12.0}{\volt} through a current-limited supply with the key up. Check +5\,V at TP12/TP13 (about \SI{4.98}{\volt} expected), key-up current (about \SI{2.5}{\milli\ampere}, estimate) and that +12V\_PA (TP14) is off.
 \item Check oscillator start-up and frequency at TP8/TP9, and the gate drive at TP4/TP5 with a spring ground (0 to \SI{5}{\volt}; simulation shows no overshoot, so anything above about \SI{5.5}{\volt} calls for R1 = \SI{2.2}{\ohm}), with the PA rail off.
 \item Connect a \SI{50}{\ohm} dummy load on J2. Key down at a reduced PA supply if possible (the simulation gives \SI{0.30}{\watt} at \SI{3}{\volt}, \SI{1.24}{\watt} at \SI{6}{\volt}). Look at the drain waveform at TP6/TP7 for ZVS and trim C1, then remove the probe and retune (its capacitance adds to C1).

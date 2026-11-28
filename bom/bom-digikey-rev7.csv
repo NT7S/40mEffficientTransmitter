@@ -45,8 +45,8 @@ TP4-TP11,0,bare SMD pads (rev 6 probe pairs),1.0 / 1.5 mm pad,,,NO PART,,,0.00,,
 D1,0,DNP gate-source clamp,SOT-23 (A1/K3),,,DNP,,,0.00,,rev 6 footprint only; leave unfitted unless the gate rings past 6 V (see report)
 U1,1,74LVC1G17,SOT-23-5,TI,SN74LVC1G17DBVR,296-11933-1-ND,"146,740",0.15,0.15,DigiKey US API 18 Nov 2026,
 U2,1,TPS62175,WSON-10,TI,TPS62175DQCR,296-39451-1-ND,0,1.71,1.71,DigiKey US API 18 Nov 2026,search summaries show $1.65-$1.71
-Y1,1,"7.030 MHz, CL 30 pF",HC-49/U THT,IQD,LFXTAL011525Bulk,449-LFXTAL011525BULK,"1,283",0.93,0.93,web search of DigiKey listing,fits the THT holes of pa40 combo footprint; listed as discontinued by IQD; CL 30 pF not 20 pF
-TOTAL,,,,,,,,,31.03,,"DigiKey parts only, one board, qty-1 prices from the DigiKey US API on 18 Nov 2026, no shipping or tax; 29.61 without R12; Y1 price is the earlier web-search figure because the API has no listing for it"
+Y1,1,"7.030 MHz, CL 30 pF",HC-49/U THT,IQD,LFXTAL011525Bulk,NOT AT DIGIKEY,,,0.00,,"not purchasable at DigiKey; supply your own (on hand); fits the THT holes of pa40 combo footprint; listed as discontinued by IQD; no API listing; price unverified; CL 30 pF not 20 pF"
+TOTAL,,,,,,,,,30.10,,"DigiKey parts only, one board, qty-1 prices from the DigiKey US API on 18 Nov 2026, no shipping or tax; 28.68 without R12; Y1 excluded (not purchasable at DigiKey; supply your own)"
 "L2, L3 cores",,T80-6 toroid x2,,Micrometals,T80-6,NOT AT DIGIKEY,,,,,"TME, rf-microwave.com, SV1AFN, Kits and Parts, Amidon"
 magnet wire,,"#16 (L2), #24 (L1), L3 gauge TBD",,,,NOT AT DIGIKEY,,,,,not in BOM
 PCB,,bare board,,JLCPCB,,NOT AT DIGIKEY,,,,,order ENIG finish (EPC AN009 p.3)

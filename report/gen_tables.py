@@ -8,7 +8,7 @@ def esc(s):
 rows=list(csv.reader(open('../bom/bom-digikey-rev7.csv')))
 hdr,body=rows[0],rows[1:]
 out=[r'\begin{longtable}{@{}p{1.8cm}r >{\raggedright\arraybackslash}p{2.3cm} >{\raggedright\arraybackslash}p{1.9cm} p{3.7cm} p{4.4cm} r r >{\raggedright\arraybackslash}p{3.9cm}@{}}',
- "\\caption{DigiKey bill of materials, rev 7, generated from \\texttt{bom-digikey-rev7.csv}. Quantity-0 lines are copper pads or DNP footprints. Unit prices at quantity 1 in USD from the DigiKey US API on 18 Nov 2026, except Y1 (earlier web search; no API listing). Check prices and stock in the cart before ordering.}\\label{tab:bom}\\\\",
+ "\\caption{DigiKey bill of materials, rev 7, generated from \\texttt{bom-digikey-rev7.csv}. Quantity-0 lines are copper pads or DNP footprints. Unit prices at quantity 1 in USD from the DigiKey US API on 18 Nov 2026. Y1 is not a DigiKey part and is excluded from the total. Check prices and stock in the cart before ordering.}\\label{tab:bom}\\\\",
  r'\toprule Refs & Qty & Value & Mfr & MPN & DigiKey PN & Unit & Ext & Note\\ \midrule\endfirsthead',
  r'\toprule Refs & Qty & Value & Mfr & MPN & DigiKey PN & Unit & Ext & Note\\ \midrule\endhead',
  r'\midrule\multicolumn{9}{r}{\emph{continued}}\\\endfoot\bottomrule\endlastfoot']
